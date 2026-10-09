@@ -16,6 +16,7 @@ func physics_update(delta: float):
 	if dead_time < dead_duration:
 		return
 	
+	player.respawn()
 	if Input.get_vector("left", "right", "up", "down"):
 		transition.emit("MovingState")
 	transition.emit("IdleState")
