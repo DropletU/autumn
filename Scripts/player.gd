@@ -3,7 +3,7 @@ class_name Player extends CharacterBody2D
 
 var respawn_point: Vector2
 
-@export var speed = 6000.0
+@export var speed = 12000.0
 
 @export var state_machine: StateMachine
 @export var health_component: HealthComponent
