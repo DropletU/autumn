@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bw8ee2l6m1sdx"]
+
+[ext_resource type="Script" uid="uid://ciusurfrv75ku" path="res://Scripts/SceneScripts/fire_place.gd" id="1_4s8v0"]
+[ext_resource type="Texture2D" uid="uid://c0s07fqbhwtge" path="res://Art/FirePlace.png" id="1_rmk1h"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
+radius = 403.27905
+
+[node name="FirePlace" type="Area2D" unique_id=928912823]
+script = ExtResource("1_4s8v0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2067017415]
+position = Vector2(0, 32)
+shape = SubResource("CircleShape2D_bhunq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1085248424]
+texture = ExtResource("1_rmk1h")
