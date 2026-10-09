@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://digo85qr1yo5g"]
 
 [ext_resource type="PackedScene" uid="uid://c5o55k0d8e4j5" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://bw8ee2l6m1sdx" path="res://Scenes/fire_place.tscn" id="2_bo1nx"]
 
 [sub_resource type="Gradient" id="Gradient_7u77a"]
 
@@ -14,5 +15,8 @@ position = Vector2(42.999996, 9.000015)
 scale = Vector2(1, 153.5)
 texture = SubResource("GradientTexture1D_57qmd")
 
-[node name="Player" parent="." unique_id=1769773239 instance=ExtResource("1_jjgbg")]
+[node name="Player" parent="." unique_id=1769773239 groups=["Player"] instance=ExtResource("1_jjgbg")]
 position = Vector2(63, 16)
+
+[node name="FirePlace" parent="." unique_id=928912823 instance=ExtResource("2_bo1nx")]
+position = Vector2(623, -65)
