@@ -10,7 +10,10 @@ func exit():
 
 func physics_update(_delta: float):
 	if Input.get_vector("left", "right", "up", "down"):
-		transition.emit("MovingState")
+		if Input.is_action_pressed("sprint"):
+			transition.emit("RunningState")
+		else:
+			transition.emit("WalkingState")
 	
 
 func unhandled_input(_event: InputEvent):
