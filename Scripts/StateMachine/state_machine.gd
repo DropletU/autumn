@@ -26,5 +26,5 @@ func transition_to(state_name: String):
 		return
 	current_state.exit()
 	current_state = new_state
-	new_state.enter()
+	current_state.enter()
 	
