@@ -9,6 +9,7 @@ func _ready() -> void:
 	for child in get_children():
 		child.player = player
 		child.transition.connect(transition_to)
+	current_state = initial_state
 	
 
 func physics_update(delta: float) -> void:
