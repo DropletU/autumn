@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://nipsv1os5lpu" path="res://Scripts/StateMachine/States/idle_state.gd" id="3_6t5aa"]
 [ext_resource type="Script" uid="uid://dtt4fj8jhm112" path="res://Scripts/StateMachine/States/moving_state.gd" id="4_vgqql"]
 [ext_resource type="Script" uid="uid://b5tlqeyjqi26d" path="res://Scripts/StateMachine/States/dead_state.gd" id="5_fkybt"]
+[ext_resource type="Script" uid="uid://c7er8020dxknj" path="res://Scripts/Classes/health_component.gd" id="7_3smsa"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wrdhp"]
 radius = 30.0
@@ -40,3 +41,7 @@ script = ExtResource("4_vgqql")
 
 [node name="DeadState" type="Node" parent="StateMachine" unique_id=1820279114]
 script = ExtResource("5_fkybt")
+
+[node name="HealthComponent" type="Node" parent="." unique_id=1538215299]
+script = ExtResource("7_3smsa")
+metadata/_custom_type_script = "uid://c7er8020dxknj"

@@ -6,6 +6,7 @@ var respawn_point: Vector2
 @export var speed = 6000.0
 
 @export var state_machine: StateMachine
+@export var health_component: HealthComponent
 
 func _ready() -> void:
 	respawn_point = global_position
@@ -24,3 +25,16 @@ func respawn(respawn_pos: Vector2 = respawn_point):
 
 func set_respawn_point(new_respawn_point: Vector2):
 	respawn_point = new_respawn_point
+	
+
+func heal_player(health: float):
+	health_component.heal(health)
+	
+
+func get_health():
+	return health_component.get_health()
+	
+
+func get_max_health():
+	return health_component.get_max_health()
+	
