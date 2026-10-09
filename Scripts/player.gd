@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 6000.0
+@export var speed = 6000.0
 
 var respawn_point: Vector2
 

@@ -13,7 +13,7 @@ func physics_update(delta: float):
 	if direction == Vector2.ZERO:
 		transition.emit("IdleState")
 		return
-	player.velocity = direction*player.SPEED*delta
+	player.velocity = direction*player.speed*delta
 	player.move_and_slide()
 	
 
