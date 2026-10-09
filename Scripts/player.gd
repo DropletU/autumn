@@ -9,6 +9,7 @@ var respawn_point: Vector2
 @export var health_component: HealthComponent
 
 func _ready() -> void:
+	GameManager.player = self
 	respawn_point = global_position
 
 func _physics_process(delta: float) -> void:
