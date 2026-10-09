@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://digo85qr1yo5g"]
+
+[ext_resource type="PackedScene" uid="uid://c5o55k0d8e4j5" path="res://Scenes/player.tscn" id="1_jjgbg"]
+
+[sub_resource type="Gradient" id="Gradient_7u77a"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_57qmd"]
+gradient = SubResource("Gradient_7u77a")
+
+[node name="Main" type="Node2D" unique_id=952195009]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1285974941]
+position = Vector2(42.999996, 9.000015)
+scale = Vector2(1, 153.5)
+texture = SubResource("GradientTexture1D_57qmd")
+
+[node name="Player" parent="." unique_id=1769773239 instance=ExtResource("1_jjgbg")]
+position = Vector2(63, 16)
