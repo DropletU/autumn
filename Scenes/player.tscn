@@ -2,15 +2,10 @@
 
 [ext_resource type="Script" uid="uid://c4pfmm08h22bc" path="res://Scripts/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://tnuv5gfwl22b" path="res://Scripts/StateMachine/state_machine.gd" id="2_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://c5n2013sjfc2y" path="res://Art/Character.png" id="2_x3wgy"]
 [ext_resource type="Script" uid="uid://nipsv1os5lpu" path="res://Scripts/StateMachine/States/idle_state.gd" id="3_6t5aa"]
 [ext_resource type="Script" uid="uid://dtt4fj8jhm112" path="res://Scripts/StateMachine/States/moving_state.gd" id="4_vgqql"]
 [ext_resource type="Script" uid="uid://b5tlqeyjqi26d" path="res://Scripts/StateMachine/States/dead_state.gd" id="5_fkybt"]
-
-[sub_resource type="Gradient" id="Gradient_cvnsp"]
-colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_3gngh"]
-gradient = SubResource("Gradient_cvnsp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(64, 64)
@@ -21,12 +16,13 @@ state_machine = NodePath("StateMachine")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=881897268]
 position = Vector2(5.9604645e-08, -2.3841858e-07)
-texture = SubResource("GradientTexture2D_3gngh")
+texture = ExtResource("2_x3wgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=735913356]
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1935150015]
+zoom = Vector2(1.41, 1.41)
 
 [node name="StateMachine" type="Node" parent="." unique_id=1432991189 node_paths=PackedStringArray("player", "initial_state")]
 script = ExtResource("2_cvnsp")
