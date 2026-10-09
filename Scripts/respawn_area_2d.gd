@@ -30,8 +30,16 @@ func _on_body_entered(body: Node2D):
 	
 
 func _get_configuration_warnings() -> PackedStringArray:
-	if not respawn_marker:
+	var number_of_markers: int = 0
+	for child in get_children():
+		if child is Marker2D:
+			number_of_markers+=1
+	if number_of_markers == 0:
 		return ["This node has no marker, so it does not know where to set its respawn point.
 		Consider adding a Marker2D as a child to define its respawn position."]
+	elif number_of_markers > 1:
+		return ["This node has more than one marker, so it does not know which one to use as its respawn point.
+		Unless a custom script is written, the last marker in the tree will be used for the respawn position.
+		Consider having only one Marker2D child to avoid confusion when setting the respawn position."]
 	return []
 	
