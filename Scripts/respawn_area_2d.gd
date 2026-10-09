@@ -24,6 +24,11 @@ func _on_child_exiting(node: Node):
 		update_configuration_warnings()
 	
 
+func _on_body_entered(body: Node2D):
+	if body.is_in_group("Player"):
+		body.set_respawn_point(respawn_point)
+	
+
 func _get_configuration_warnings() -> PackedStringArray:
 	if not respawn_marker:
 		return ["This node has no marker, so it does not know where to set its respawn point.
