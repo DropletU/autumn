@@ -12,9 +12,10 @@
 radius = 30.0
 height = 142.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1769773239 node_paths=PackedStringArray("state_machine")]
+[node name="Player" type="CharacterBody2D" unique_id=1769773239 node_paths=PackedStringArray("state_machine", "health_component")]
 script = ExtResource("1_v0iea")
 state_machine = NodePath("StateMachine")
+health_component = NodePath("HealthComponent")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=881897268]
 position = Vector2(5.9604645e-08, -2.3841858e-07)
