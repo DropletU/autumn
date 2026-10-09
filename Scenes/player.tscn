@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://c5o55k0d8e4j5"]
 
 [ext_resource type="Script" uid="uid://c4pfmm08h22bc" path="res://Scripts/player.gd" id="1_v0iea"]
+[ext_resource type="Script" uid="uid://tnuv5gfwl22b" path="res://Scripts/StateMachine/state_machine.gd" id="2_cvnsp"]
+[ext_resource type="Script" uid="uid://nipsv1os5lpu" path="res://Scripts/StateMachine/States/idle_state.gd" id="3_6t5aa"]
+[ext_resource type="Script" uid="uid://dtt4fj8jhm112" path="res://Scripts/StateMachine/States/moving_state.gd" id="4_vgqql"]
+[ext_resource type="Script" uid="uid://b5tlqeyjqi26d" path="res://Scripts/StateMachine/States/dead_state.gd" id="5_fkybt"]
 
 [sub_resource type="Gradient" id="Gradient_cvnsp"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
@@ -11,8 +15,9 @@ gradient = SubResource("Gradient_cvnsp")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(64, 64)
 
-[node name="Player" type="CharacterBody2D" unique_id=1769773239]
+[node name="Player" type="CharacterBody2D" unique_id=1769773239 node_paths=PackedStringArray("state_machine")]
 script = ExtResource("1_v0iea")
+state_machine = NodePath("StateMachine")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=881897268]
 position = Vector2(5.9604645e-08, -2.3841858e-07)
@@ -22,3 +27,18 @@ texture = SubResource("GradientTexture2D_3gngh")
 shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1935150015]
+
+[node name="StateMachine" type="Node" parent="." unique_id=1432991189 node_paths=PackedStringArray("player", "initial_state")]
+script = ExtResource("2_cvnsp")
+player = NodePath("..")
+initial_state = NodePath("IdleState")
+metadata/_custom_type_script = "uid://tnuv5gfwl22b"
+
+[node name="IdleState" type="Node" parent="StateMachine" unique_id=476263416]
+script = ExtResource("3_6t5aa")
+
+[node name="MovingState" type="Node" parent="StateMachine" unique_id=1557069569]
+script = ExtResource("4_vgqql")
+
+[node name="DeadState" type="Node" parent="StateMachine" unique_id=1820279114]
+script = ExtResource("5_fkybt")
