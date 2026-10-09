@@ -17,6 +17,7 @@ func physics_update(delta: float):
 	player.move_and_slide()
 	
 
-func unhandled_input(_event: InputEvent):
-	pass # Runs on the players _unhandled_input()
+func unhandled_input(event: InputEvent):
+	if event.is_action_pressed("sprint"):
+		transition.emit("RunningState")
 	
