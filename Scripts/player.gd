@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 
-@export var speed = 6000.0
-
 var respawn_point: Vector2
+
+@export var speed = 6000.0
 
 @export var state_machine: StateMachine
 
