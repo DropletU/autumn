@@ -21,3 +21,6 @@ func _unhandled_input(event: InputEvent) -> void:
 func respawn(respawn_pos: Vector2 = respawn_point):
 	global_position = respawn_pos
 	
+
+func set_respawn_point(new_respawn_point: Vector2):
+	respawn_point = new_respawn_point
