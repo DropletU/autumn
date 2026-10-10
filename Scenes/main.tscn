@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bxa5dxld4ewt0"]
+
+[ext_resource type="PackedScene" uid="uid://c5o55k0d8e4j5" path="res://Scenes/player.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://bw8ee2l6m1sdx" path="res://Scenes/fire_place.tscn" id="2_bo1nx"]
+
+[sub_resource type="Gradient" id="Gradient_7u77a"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_57qmd"]
+gradient = SubResource("Gradient_7u77a")
+
+[node name="Main" type="Node2D" unique_id=952195009]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1285974941]
+position = Vector2(42.999996, 9.000015)
+scale = Vector2(1, 153.5)
+texture = SubResource("GradientTexture1D_57qmd")
+
+[node name="Player" parent="." unique_id=1769773239 groups=["Player"] instance=ExtResource("1_jjgbg")]
+position = Vector2(63, 16)
+
+[node name="FirePlace" parent="." unique_id=928912823 instance=ExtResource("2_bo1nx")]
+position = Vector2(623, -65)
