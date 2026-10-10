@@ -8,7 +8,6 @@ var respawn_point: Vector2
 @export var state_machine: StateMachine
 @export var health_component: HealthComponent
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
-var bIsDead = false
 
 func _ready() -> void:
 	GameManager.player = self
@@ -18,20 +17,6 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	state_machine.physics_update(delta)
-	
-	if bIsDead == false:
-		if Input.is_action_just_pressed("sprint"):
-			bIsDead = true
-		if Input.is_action_pressed("left"):
-			$AnimatedSprite2D.scale = Vector2(-1,1)
-		elif Input.is_action_pressed("right"):
-			$AnimatedSprite2D.scale = Vector2.ONE
-		if Input.is_anything_pressed():
-			$AnimatedSprite2D.play("walk")
-		else:
-			$AnimatedSprite2D.play("default")
-	else:
-		$AnimatedSprite2D.play("death")
 	
 
 func _unhandled_input(event: InputEvent) -> void:

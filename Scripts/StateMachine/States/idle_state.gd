@@ -2,6 +2,8 @@ extends PlayerState
 
 func enter():
 	player.velocity = Vector2.ZERO
+	player.animation.speed_scale = 1
+	player.animation.play("default")
 	
 
 func exit():
@@ -17,5 +19,5 @@ func physics_update(_delta: float):
 	
 
 func unhandled_input(_event: InputEvent):
-	pass # Runs on the players _unhandled_input()
+	pass
 	

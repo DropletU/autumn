@@ -1,7 +1,8 @@
 extends PlayerState
 
 func enter():
-	pass # Runs entering the state
+	player.animation.speed_scale = 1
+	player.animation.play("walk")
 	
 
 func exit():
@@ -13,6 +14,10 @@ func physics_update(delta: float):
 	if direction == Vector2.ZERO:
 		transition.emit("IdleState")
 		return
+	if direction.x > 0 and player.animation.flip_h:
+		player.animation.flip_h = false
+	elif direction.x < 0 and not player.animation.flip_h:
+		player.animation.flip_h = true
 	player.velocity = direction*player.speed*delta
 	player.move_and_slide()
 	
