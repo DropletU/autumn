@@ -19,6 +19,7 @@ func _process(_delta: float) -> void:
 		if bCanContinue:
 			PlayNextLine()
 			
+
 func PlayNextLine():
 	if bCanContinue == false:
 		return
@@ -27,8 +28,7 @@ func PlayNextLine():
 	CurrentIndex += 1
 	bCanContinue = false
 	if CurrentIndex > Lines.size() - 1:
-		await TransitionScreen.FadeToColor(Color.WHITE, 1.5)
-		await TransitionScreen.MoveToScene("res://Scenes/main.tscn", Color.WHITE, .1, 1.5)
+		await GameManager.enter_new_room("res://Scenes/Worlds/main2.tscn", Vector2(63, 16), Color.WHITE, 1.2)
 		return
 	
 	
