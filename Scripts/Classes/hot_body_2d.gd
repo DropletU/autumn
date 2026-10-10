@@ -1,29 +1,26 @@
 class_name HotBody2D extends Area2D
 
 @onready var collider = $CollisionShape2D
-var heal_player: bool = false
+var player_in_range: bool = false
 
-@export var heal_per_sec: float = 5.0
+@export var temperature: = 50.0
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	body_exited.connect(_on_body_exited)
 	
 
-func _physics_process(delta: float) -> void:
-	if not heal_player:
-		return
-	GameManager.heal_player(heal_per_sec*delta)
-	if GameManager.player_health() >= GameManager.player_max_health():
-		heal_player = false
+func _physics_process(_delta: float) -> void:
+	if player_in_range:
+		GameManager.set_temp(temperature)
 	
 
 func _on_body_entered(body: Node2D):
 	if body.is_in_group("Player"):
-		heal_player = true
+		player_in_range = true
 	
 
 func _on_body_exited(body: Node2D):
 	if body.is_in_group("Player"):
-		heal_player = false
+		player_in_range = false
 	

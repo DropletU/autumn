@@ -2,9 +2,11 @@ extends Node
 
 var player: Player
 
+var temps_in_effect: PackedFloat32Array = []
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	process_physics_priority = 1
 	
 
 func heal_player(health: float):
@@ -35,6 +37,23 @@ func enter_new_room(scene: String, new_pos: Vector2, fadeColor: Color = Color.BL
 	await TransitionScreen.EndTransition(outTime)
 	
 
+func set_temp(temperature: float):
+	temps_in_effect.append(temperature)
+	
+
+func _set_player_temp():
+	if not player:
+		return
+	temps_in_effect.append(30.0)
+	var new_temp: float = 0.0
+	for temp in temps_in_effect:
+		new_temp+=temp
+	new_temp/=temps_in_effect.size()
+	player.temperature_component.change_area_temperature(new_temp)
+	temps_in_effect.clear()
+	
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	pass
+func _physics_process(_delta: float) -> void:
+	_set_player_temp()
+	
