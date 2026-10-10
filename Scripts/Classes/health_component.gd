@@ -125,11 +125,12 @@ func _died() -> void:
 	died.emit()
 	
 
-func revive():
+func revive(health: float = _max_hp):
 	if is_alive():
 		return
 	
 	_alive = true
+	set_health(health)
 	revived.emit()
 	
 
