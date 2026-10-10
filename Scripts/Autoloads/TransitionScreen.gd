@@ -3,23 +3,19 @@ extends Control
 var bTransitioning = false
 
 func _ready() -> void:
-	%Panel.modulate = Color.BLACK
-	FadeOut(1.2)
+	%Panel.modulate = Color.TRANSPARENT
+	EndTransition(1.2)
 	
-func MoveToScene(scene, fadeColor: Color = Color.BLACK, inTime: float = 0.5, outTime: float = 0.5):
-	if bTransitioning:
-		return
+
+func BeginTransition(inTime: = 1.0, fadeColor: Color = Color.BLACK):
 	bTransitioning = true
-	await FadeToColor(fadeColor, inTime)
-	get_tree().change_scene_to_file(scene)
-	await FadeOut(outTime)
-	bTransitioning = false
-	
-func FadeToColor(fadeColor, inTime):
 	var tween = get_tree().create_tween()
 	tween.tween_property(%Panel, "modulate", fadeColor, inTime)
 	await tween.finished
 	
-func FadeOut(outTime):
-	FadeToColor(Color(0,0,0,0), outTime)
+func EndTransition(outTime: = 1.0, fadeColor: Color = Color.TRANSPARENT):
+	var tween = get_tree().create_tween()
+	tween.tween_property(%Panel, "modulate", fadeColor, outTime)
+	await tween.finished
+	bTransitioning = false
 	
