@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://c7er8020dxknj" path="res://Scripts/Classes/health_component.gd" id="7_3smsa"]
 [ext_resource type="Texture2D" uid="uid://c2uvr4veg1nev" path="res://Art/Animation/PlayerDeath.png" id="8_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://bxo72xswpvrri" path="res://Art/Animation/PlayerWalk.png" id="9_f1ek2"]
+[ext_resource type="Script" uid="uid://jd3hy5lh04dl" path="res://Scripts/Classes/temperature_component.gd" id="11_gymyn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wrdhp"]
 radius = 25.0
@@ -122,3 +123,7 @@ metadata/_custom_type_script = "uid://c7er8020dxknj"
 sprite_frames = SubResource("SpriteFrames_7f0hl")
 animation = &"death"
 autoplay = "default"
+
+[node name="TemperatureComponent" type="Node" parent="." unique_id=471818041]
+script = ExtResource("11_gymyn")
+metadata/_custom_type_script = "uid://jd3hy5lh04dl"
