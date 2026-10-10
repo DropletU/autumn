@@ -83,7 +83,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D" unique_id=932062855 node_paths=PackedStringArray("state_machine", "health_component")]
+[node name="Player" type="CharacterBody2D" unique_id=932062855 node_paths=PackedStringArray("state_machine", "health_component") groups=["Player"]]
 script = ExtResource("1_v0iea")
 state_machine = NodePath("StateMachine")
 health_component = NodePath("HealthComponent")
