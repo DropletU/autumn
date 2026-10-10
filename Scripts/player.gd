@@ -8,6 +8,7 @@ var respawn_point: Vector2
 @export var state_machine: StateMachine
 @export var health_component: HealthComponent
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
+@onready var temperature_component: TemperatureComponent = $TemperatureComponent
 
 func _ready() -> void:
 	GameManager.player = self
