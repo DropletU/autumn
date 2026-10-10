@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bxo72xswpvrri" path="res://Art/Animation/PlayerWalk.png" id="9_f1ek2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wrdhp"]
-radius = 30.0
-height = 142.0
+radius = 25.0
+height = 66.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7dp3o"]
 atlas = ExtResource("8_tx1dd")
@@ -89,7 +89,7 @@ health_component = NodePath("HealthComponent")
 metadata/_custom_type_script = "uid://c4pfmm08h22bc"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=735913356]
-position = Vector2(0, -7)
+position = Vector2(0, 40)
 shape = SubResource("CapsuleShape2D_wrdhp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1935150015]

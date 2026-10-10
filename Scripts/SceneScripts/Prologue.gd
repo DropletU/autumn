@@ -27,9 +27,8 @@ func PlayNextLine():
 	CurrentIndex += 1
 	bCanContinue = false
 	if CurrentIndex > Lines.size() - 1:
-		%AnimationPlayer.play("anim")
-		await %AnimationPlayer.animation_finished
-		get_tree().change_scene_to_file("res://Scenes/main.tscn")
+		await TransitionScreen.FadeToColor(Color.WHITE, 1.5)
+		await TransitionScreen.MoveToScene("res://Scenes/main.tscn", Color.WHITE, .1, 1.5)
 		return
 	
 	
