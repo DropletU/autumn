@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ciusurfrv75ku" path="res://Scripts/Classes/hot_body_2d.gd" id="1_4s8v0"]
 [ext_resource type="Texture2D" uid="uid://c0s07fqbhwtge" path="res://Art/FirePlace.png" id="1_rmk1h"]
+[ext_resource type="Texture2D" uid="uid://cejqb2amnv0l7" path="res://Art/Light.png" id="3_mxup0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
 radius = 403.27905
@@ -16,3 +17,8 @@ shape = SubResource("CircleShape2D_bhunq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1085248424]
 texture = ExtResource("1_rmk1h")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=624027743]
+energy = 0.25
+texture = ExtResource("3_mxup0")
+texture_scale = 4.45
