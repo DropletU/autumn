@@ -3,7 +3,7 @@ class_name HotBody2D extends Area2D
 @onready var collider = $CollisionShape2D
 var player_in_range: bool = false
 
-@export var temperature: = 50.0
+@export var temperature: = 60.0
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)

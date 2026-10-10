@@ -18,9 +18,15 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	state_machine.physics_update(delta)
+	if not health_component.is_alive():
+		return
 	if temperature_component.get_freezing():
+		print("Damage: ", temperature_component.get_freeze_damage())
+		print("Health: ", health_component.get_health())
 		health_component.take_damage(temperature_component.get_freeze_damage())
 	else:
+		print("Healing: ", temperature_component.get_healing())
+		print("Health: ", health_component.get_health())
 		health_component.heal(temperature_component.get_healing())
 	
 
