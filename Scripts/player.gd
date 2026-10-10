@@ -15,6 +15,7 @@ func _ready() -> void:
 	GameManager.player = self
 	z_index = 1
 	respawn_point = global_position
+	health_component.died.connect(_on_died)
 	
 
 func _physics_process(delta: float) -> void:
@@ -50,4 +51,8 @@ func get_health():
 
 func get_max_health():
 	return health_component.get_max_health()
+	
+
+func _on_died():
+	state_machine.transition_to("DeadState")
 	
