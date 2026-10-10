@@ -1,6 +1,6 @@
 class_name PlayerState extends Node
 
-var player: CharacterBody2D
+var player: Player
 
 @warning_ignore("unused_signal")
 signal transition(new_state: String)
