@@ -5,6 +5,7 @@ var respawn_point: Vector2
 
 @export var speed = 12000.0
 
+@export var key_held: bool = false
 @export var state_machine: StateMachine
 @export var health_component: HealthComponent
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
