@@ -6,7 +6,7 @@ func _ready() -> void:
 	%Panel.modulate = Color.BLACK
 	FadeOut(1.2)
 	
-func MoveToScene(scene, fadeColor, inTime, outTime):
+func MoveToScene(scene, fadeColor: Color = Color.BLACK, inTime: float = 0.5, outTime: float = 0.5):
 	if bTransitioning:
 		return
 	bTransitioning = true
