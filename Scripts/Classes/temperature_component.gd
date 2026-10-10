@@ -8,5 +8,5 @@ func _physics_process(delta: float) -> void:
 	
 
 func change_area_temperature(new_temp):
-	area_temperature = new_temp
+	area_temperature = lerp(area_temperature, new_temp, 1*get_physics_process_delta_time())
 	
