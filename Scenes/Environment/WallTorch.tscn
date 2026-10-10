@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cqdpilqotm0ne"]
+
+[ext_resource type="Texture2D" uid="uid://de30mrct5k2tl" path="res://Art/WallTorch.png" id="1_fp6sl"]
+[ext_resource type="Texture2D" uid="uid://cejqb2amnv0l7" path="res://Art/Light.png" id="2_5blmf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fp6sl"]
+
+[node name="WallTorch" type="StaticBody2D" unique_id=2144862585]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1438362994]
+texture = ExtResource("1_fp6sl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=843475539]
+shape = SubResource("CircleShape2D_fp6sl")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=653858757]
+energy = 0.2
+texture = ExtResource("2_5blmf")
+texture_scale = 4.0

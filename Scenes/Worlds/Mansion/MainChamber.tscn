@@ -4,6 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://c5o55k0d8e4j5" path="res://Scenes/player.tscn" id="2_0bc6q"]
 [ext_resource type="PackedScene" uid="uid://bw8ee2l6m1sdx" path="res://Scenes/fire_place.tscn" id="3_0bc6q"]
 [ext_resource type="Texture2D" uid="uid://ynjmvvxiqinu" path="res://Art/Overlay/HeatOverlay.png" id="4_dptcd"]
+[ext_resource type="PackedScene" uid="uid://dymle5maypjx4" path="res://Scenes/key_2d.tscn" id="5_t6qia"]
+[ext_resource type="PackedScene" uid="uid://c14mfc2xctkfd" path="res://Scenes/Environment/Teleporter.tscn" id="6_r5jlj"]
+[ext_resource type="PackedScene" uid="uid://cabbntt5mibuw" path="res://Scenes/Environment/BookShelf.tscn" id="7_imbot"]
+[ext_resource type="PackedScene" uid="uid://bkidgn0fb2ym7" path="res://Scenes/Environment/Stool.tscn" id="8_ifb1i"]
+[ext_resource type="PackedScene" uid="uid://cqdpilqotm0ne" path="res://Scenes/Environment/WallTorch.tscn" id="9_ifb1i"]
+[ext_resource type="Texture2D" uid="uid://cxala2u5tssal" path="res://Art/BloodSplatter/BloodSplatter1.png" id="10_cbae1"]
+[ext_resource type="Texture2D" uid="uid://eqpnvhrl3rdw" path="res://Art/BloodSplatter/BloodSplatter2.png" id="11_tvwa2"]
 
 [node name="MainChamber" type="Node2D" unique_id=1228869116]
 
@@ -35,3 +42,156 @@ texture = ExtResource("4_dptcd")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=289044734]
 color = Color(0.07525144, 0.13421229, 0.31823575, 1)
+
+[node name="Key2D" parent="." unique_id=1049642994 instance=ExtResource("5_t6qia")]
+position = Vector2(-1191, 2178)
+
+[node name="Teleporter" parent="." unique_id=718898599 instance=ExtResource("6_r5jlj")]
+position = Vector2(-1543, 1943)
+transition_to = "C:/Users/16048/Documents/dev/autumn/Scenes/Worlds/main2.tscn"
+
+[node name="BookShelf" parent="." unique_id=2144862585 instance=ExtResource("7_imbot")]
+position = Vector2(578, -121)
+
+[node name="BookShelf2" parent="." unique_id=1708556483 instance=ExtResource("7_imbot")]
+position = Vector2(392, -121)
+
+[node name="BookShelf3" parent="." unique_id=293149113 instance=ExtResource("7_imbot")]
+position = Vector2(841, -121)
+
+[node name="BookShelf4" parent="." unique_id=446987712 instance=ExtResource("7_imbot")]
+position = Vector2(392, 299)
+
+[node name="BookShelf5" parent="." unique_id=734230015 instance=ExtResource("7_imbot")]
+position = Vector2(578, 299)
+
+[node name="BookShelf6" parent="." unique_id=834131410 instance=ExtResource("7_imbot")]
+position = Vector2(751, 299)
+
+[node name="BookShelf7" parent="." unique_id=724026493 instance=ExtResource("7_imbot")]
+position = Vector2(931, 299)
+
+[node name="BookShelf8" parent="." unique_id=310283951 instance=ExtResource("7_imbot")]
+position = Vector2(392, 648)
+
+[node name="BookShelf9" parent="." unique_id=48242970 instance=ExtResource("7_imbot")]
+position = Vector2(578, 648)
+
+[node name="BookShelf10" parent="." unique_id=1373912565 instance=ExtResource("7_imbot")]
+position = Vector2(751, 648)
+
+[node name="BookShelf11" parent="." unique_id=865862971 instance=ExtResource("7_imbot")]
+position = Vector2(931, 648)
+
+[node name="BookShelf12" parent="." unique_id=1542245976 instance=ExtResource("7_imbot")]
+position = Vector2(392, 964)
+
+[node name="BookShelf13" parent="." unique_id=1799778714 instance=ExtResource("7_imbot")]
+position = Vector2(578, 964)
+
+[node name="BookShelf14" parent="." unique_id=472589897 instance=ExtResource("7_imbot")]
+position = Vector2(751, 964)
+
+[node name="BookShelf15" parent="." unique_id=522453016 instance=ExtResource("7_imbot")]
+position = Vector2(931, 964)
+
+[node name="BookShelf16" parent="." unique_id=613354089 instance=ExtResource("7_imbot")]
+position = Vector2(1986, 514)
+
+[node name="BookShelf17" parent="." unique_id=1307933738 instance=ExtResource("7_imbot")]
+position = Vector2(2172, 514)
+
+[node name="BookShelf18" parent="." unique_id=306900971 instance=ExtResource("7_imbot")]
+position = Vector2(2345, 514)
+
+[node name="BookShelf19" parent="." unique_id=1733018766 instance=ExtResource("7_imbot")]
+position = Vector2(2525, 514)
+
+[node name="BookShelf20" parent="." unique_id=1511038361 instance=ExtResource("7_imbot")]
+position = Vector2(3066, 331)
+
+[node name="BookShelf21" parent="." unique_id=1573605125 instance=ExtResource("7_imbot")]
+position = Vector2(3252, 331)
+
+[node name="BookShelf22" parent="." unique_id=154273659 instance=ExtResource("7_imbot")]
+position = Vector2(3425, 331)
+
+[node name="BookShelf23" parent="." unique_id=446138207 instance=ExtResource("7_imbot")]
+position = Vector2(3605, 331)
+
+[node name="BookShelf24" parent="." unique_id=1234726524 instance=ExtResource("7_imbot")]
+position = Vector2(2554, 819)
+
+[node name="BookShelf25" parent="." unique_id=1667346482 instance=ExtResource("7_imbot")]
+position = Vector2(2740, 819)
+
+[node name="BookShelf26" parent="." unique_id=722015198 instance=ExtResource("7_imbot")]
+position = Vector2(2913, 819)
+
+[node name="BookShelf27" parent="." unique_id=2024480153 instance=ExtResource("7_imbot")]
+position = Vector2(3093, 819)
+
+[node name="Stool" parent="." unique_id=2088815187 instance=ExtResource("8_ifb1i")]
+position = Vector2(-257, 778)
+
+[node name="Stool2" parent="." unique_id=1948718005 instance=ExtResource("8_ifb1i")]
+position = Vector2(-170, 428)
+
+[node name="Stool3" parent="." unique_id=1700357545 instance=ExtResource("8_ifb1i")]
+position = Vector2(-269, 423)
+
+[node name="Stool4" parent="." unique_id=2041869316 instance=ExtResource("8_ifb1i")]
+position = Vector2(1568, 131)
+
+[node name="WallTorch" parent="." unique_id=357446813 instance=ExtResource("9_ifb1i")]
+position = Vector2(2291, 19)
+
+[node name="WallTorch2" parent="." unique_id=917471819 instance=ExtResource("9_ifb1i")]
+position = Vector2(2536, 13)
+
+[node name="WallTorch3" parent="." unique_id=145503251 instance=ExtResource("9_ifb1i")]
+position = Vector2(2805, 3)
+
+[node name="BloodSplatter1" type="Sprite2D" parent="." unique_id=1401420596]
+position = Vector2(3320, 786)
+texture = ExtResource("10_cbae1")
+
+[node name="BloodSplatter2" type="Sprite2D" parent="." unique_id=1943024168]
+position = Vector2(3630, 599)
+texture = ExtResource("11_tvwa2")
+
+[node name="BloodSplatter3" type="Sprite2D" parent="." unique_id=476929698]
+position = Vector2(4630, -955)
+texture = ExtResource("10_cbae1")
+
+[node name="BloodSplatter4" type="Sprite2D" parent="." unique_id=1335501433]
+position = Vector2(6417, -1040)
+texture = ExtResource("10_cbae1")
+
+[node name="BloodSplatter5" type="Sprite2D" parent="." unique_id=1185474225]
+position = Vector2(6327, -941)
+texture = ExtResource("10_cbae1")
+
+[node name="BloodSplatter6" type="Sprite2D" parent="." unique_id=874004124]
+position = Vector2(6992, -807)
+texture = ExtResource("10_cbae1")
+
+[node name="BloodSplatter7" type="Sprite2D" parent="." unique_id=524009376]
+position = Vector2(7009, -403)
+texture = ExtResource("11_tvwa2")
+
+[node name="BloodSplatter8" type="Sprite2D" parent="." unique_id=1932071660]
+position = Vector2(6651, 297)
+texture = ExtResource("11_tvwa2")
+
+[node name="BloodSplatter9" type="Sprite2D" parent="." unique_id=1555584536]
+position = Vector2(7255, 528)
+texture = ExtResource("11_tvwa2")
+
+[node name="BloodSplatter10" type="Sprite2D" parent="." unique_id=1421254554]
+position = Vector2(7496, 467)
+texture = ExtResource("11_tvwa2")
+
+[node name="BloodSplatter11" type="Sprite2D" parent="." unique_id=214981447]
+position = Vector2(6237, -285)
+texture = ExtResource("11_tvwa2")

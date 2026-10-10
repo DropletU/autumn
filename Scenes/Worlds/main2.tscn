@@ -129,7 +129,10 @@ texture = ExtResource("26_6tdgu")
 [node name="Player" parent="." unique_id=1769773239 instance=ExtResource("27_e2dh3")]
 position = Vector2(63, 16)
 
-[node name="Sprite2D20" type="CPUParticles2D" parent="Player/AnimatedSprite2D" parent_id_path=PackedInt32Array(1769773239, 641165042) index="0" unique_id=1067378782]
+[node name="AnimatedSprite2D" parent="Player" index="4" unique_id=641165042]
+animation = &"death"
+
+[node name="Sprite2D20" type="CPUParticles2D" parent="Player/AnimatedSprite2D" index="0" unique_id=1067378782]
 position = Vector2(-1, -32)
 amount = 20
 texture = ExtResource("28_1uiaa")
