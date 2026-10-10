@@ -18,6 +18,10 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	state_machine.physics_update(delta)
+	if temperature_component.get_freezing():
+		health_component.take_damage(temperature_component.get_freeze_damage())
+	else:
+		health_component.heal(temperature_component.get_healing())
 	
 
 func _unhandled_input(event: InputEvent) -> void:
