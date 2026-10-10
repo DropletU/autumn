@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cqdpilqotm0ne" path="res://Scenes/Environment/WallTorch.tscn" id="9_ifb1i"]
 [ext_resource type="Texture2D" uid="uid://cxala2u5tssal" path="res://Art/BloodSplatter/BloodSplatter1.png" id="10_cbae1"]
 [ext_resource type="Texture2D" uid="uid://eqpnvhrl3rdw" path="res://Art/BloodSplatter/BloodSplatter2.png" id="11_tvwa2"]
+[ext_resource type="Texture2D" uid="uid://cl80pstm2uy0j" path="res://Art/DoorFront.png" id="12_tvwa2"]
 
 [node name="MainChamber" type="Node2D" unique_id=1228869116]
 
@@ -47,8 +48,9 @@ color = Color(0.07525144, 0.13421229, 0.31823575, 1)
 position = Vector2(-1191, 2178)
 
 [node name="Teleporter" parent="." unique_id=718898599 instance=ExtResource("6_r5jlj")]
-position = Vector2(-1543, 1943)
-transition_to = "C:/Users/16048/Documents/dev/autumn/Scenes/Worlds/main2.tscn"
+position = Vector2(4158, -1191)
+transition_to = "C:/Users/16048/Documents/dev/autumn/Scenes/Worlds/Mansion/Bathroom.tscn"
+transition_pos = Vector2(-228, 140)
 
 [node name="BookShelf" parent="." unique_id=2144862585 instance=ExtResource("7_imbot")]
 position = Vector2(578, -121)
@@ -195,3 +197,7 @@ texture = ExtResource("11_tvwa2")
 [node name="BloodSplatter11" type="Sprite2D" parent="." unique_id=214981447]
 position = Vector2(6237, -285)
 texture = ExtResource("11_tvwa2")
+
+[node name="DoorFront" type="Sprite2D" parent="." unique_id=470583488]
+position = Vector2(4163, -1301)
+texture = ExtResource("12_tvwa2")
