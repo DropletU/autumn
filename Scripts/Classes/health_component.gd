@@ -20,7 +20,7 @@ class_name HealthComponent extends Node
 
 ## The current health. Use [method get_health] to check
 ## this value
-@export_range(1, 1000) var _hp: float = 100
+@export_range(0, 1000) var _hp: float = 100
 ## The current max health. Use [method get_max_health]
 ## to check this value
 @export_range(1, 1000) var _max_hp: float = 100

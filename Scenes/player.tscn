@@ -121,9 +121,11 @@ metadata/_custom_type_script = "uid://c7er8020dxknj"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=641165042]
 sprite_frames = SubResource("SpriteFrames_7f0hl")
-animation = &"death"
 autoplay = "default"
 
 [node name="TemperatureComponent" type="Node" parent="." unique_id=471818041]
 script = ExtResource("11_gymyn")
 metadata/_custom_type_script = "uid://jd3hy5lh04dl"
+
+[node name="HeldObjectPosition" type="Marker2D" parent="." unique_id=499787899]
+position = Vector2(0, 40)

@@ -5,6 +5,7 @@ var respawn_point: Vector2
 
 @export var speed = 12000.0
 
+@export var key_held: bool = false
 @export var state_machine: StateMachine
 @export var health_component: HealthComponent
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
@@ -14,6 +15,7 @@ func _ready() -> void:
 	GameManager.player = self
 	z_index = 1
 	respawn_point = global_position
+	health_component.died.connect(_on_died)
 	
 
 func _physics_process(delta: float) -> void:
@@ -21,12 +23,8 @@ func _physics_process(delta: float) -> void:
 	if not health_component.is_alive():
 		return
 	if temperature_component.get_freezing():
-		print("Damage: ", temperature_component.get_freeze_damage())
-		print("Health: ", health_component.get_health())
 		health_component.take_damage(temperature_component.get_freeze_damage())
 	else:
-		print("Healing: ", temperature_component.get_healing())
-		print("Health: ", health_component.get_health())
 		health_component.heal(temperature_component.get_healing())
 	
 
@@ -53,4 +51,8 @@ func get_health():
 
 func get_max_health():
 	return health_component.get_max_health()
+	
+
+func _on_died():
+	state_machine.transition_to("DeadState")
 	
