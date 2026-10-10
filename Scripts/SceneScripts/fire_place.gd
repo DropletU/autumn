@@ -1,4 +1,4 @@
-extends Area2D
+class_name HotBody2D extends Area2D
 
 @onready var collider = $CollisionShape2D
 var heal_player: bool = false

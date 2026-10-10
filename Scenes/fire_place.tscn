@@ -6,8 +6,9 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_bhunq"]
 radius = 403.27905
 
-[node name="FirePlace" type="Area2D" unique_id=928912823]
+[node name="FirePlace" type="Area2D" unique_id=592339634]
 script = ExtResource("1_4s8v0")
+metadata/_custom_type_script = "uid://ciusurfrv75ku"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2067017415]
 position = Vector2(0, 32)
