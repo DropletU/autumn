@@ -8,26 +8,91 @@
 [ext_resource type="Script" uid="uid://b5tlqeyjqi26d" path="res://Scripts/StateMachine/States/dead_state.gd" id="5_fkybt"]
 [ext_resource type="Script" uid="uid://cb0so6ei5vmix" path="res://Scripts/StateMachine/States/running_state.gd" id="6_8erm5"]
 [ext_resource type="Script" uid="uid://c7er8020dxknj" path="res://Scripts/Classes/health_component.gd" id="7_3smsa"]
+[ext_resource type="Texture2D" uid="uid://c2uvr4veg1nev" path="res://Art/Animation/PlayerDeath.png" id="8_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://bxo72xswpvrri" path="res://Art/Animation/PlayerWalk.png" id="9_f1ek2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wrdhp"]
 radius = 30.0
 height = 142.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dp3o"]
+atlas = ExtResource("8_tx1dd")
+region = Rect2(0, 0, 180, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4iuc"]
+atlas = ExtResource("8_tx1dd")
+region = Rect2(180, 0, 180, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
+atlas = ExtResource("2_x3wgy")
+region = Rect2(0, 0, 180, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ek2"]
+atlas = ExtResource("9_f1ek2")
+region = Rect2(0, 0, 180, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
+atlas = ExtResource("9_f1ek2")
+region = Rect2(185, 0, 180, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu2lt"]
+atlas = ExtResource("9_f1ek2")
+region = Rect2(370, 0, 180, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukyrk"]
+atlas = ExtResource("9_f1ek2")
+region = Rect2(555, 0, 180, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7f0hl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dp3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4iuc")
+}],
+"loop": 2,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx1dd")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ek2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gymyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu2lt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukyrk")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D" unique_id=1769773239 node_paths=PackedStringArray("state_machine", "health_component")]
 script = ExtResource("1_v0iea")
 state_machine = NodePath("StateMachine")
 health_component = NodePath("HealthComponent")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=881897268]
-position = Vector2(5.9604645e-08, -2.3841858e-07)
-texture = ExtResource("2_x3wgy")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=735913356]
 position = Vector2(0, -7)
 shape = SubResource("CapsuleShape2D_wrdhp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1935150015]
-zoom = Vector2(1.41, 1.41)
+zoom = Vector2(0.82, 0.82)
 
 [node name="StateMachine" type="Node" parent="." unique_id=1432991189 node_paths=PackedStringArray("player", "initial_state")]
 script = ExtResource("2_cvnsp")
@@ -51,3 +116,7 @@ script = ExtResource("5_fkybt")
 [node name="HealthComponent" type="Node" parent="." unique_id=1538215299]
 script = ExtResource("7_3smsa")
 metadata/_custom_type_script = "uid://c7er8020dxknj"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=641165042]
+sprite_frames = SubResource("SpriteFrames_7f0hl")
+animation = &"death"
