@@ -24,6 +24,9 @@ func enter_new_room(scene: String, new_pos: Vector2, fadeColor: Color = Color.BL
 	if TransitionScreen.bTransitioning:
 		push_warning("Attempted to transition to scene " + scene + " while already transitioning.")
 		return
+	if not FileAccess.file_exists(scene):
+		scene = "res://Scenes/Worlds/" + scene
+	assert(FileAccess.file_exists(scene), "Could not find scene: " + scene + " during scene transition!")
 	var packed_scene: PackedScene = load(scene)
 	
 	await TransitionScreen.BeginTransition(inTime, fadeColor)
