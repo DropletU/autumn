@@ -7,7 +7,7 @@ var respawn_point: Vector2
 
 @export var state_machine: StateMachine
 @export var health_component: HealthComponent
-
+@onready var animation: AnimatedSprite2D = $AnimatedSprite2D
 var bIsDead = false
 
 func _ready() -> void:
