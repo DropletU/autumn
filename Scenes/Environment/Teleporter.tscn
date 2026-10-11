@@ -5,8 +5,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7f0hl"]
 size = Vector2(180, 80)
 
-[node name="Teleporter" type="Area2D" unique_id=718898599]
+[node name="Teleporter" type="Area2D" unique_id=389255538]
 script = ExtResource("1_omntx")
+metadata/_custom_type_script = "uid://cdt8a564pw6rr"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=122086798]
 shape = SubResource("RectangleShape2D_7f0hl")
