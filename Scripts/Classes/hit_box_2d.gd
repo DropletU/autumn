@@ -6,7 +6,7 @@ class_name HitBox2D extends Area2D
 
 ## The damage the player will take. Keep in mind the players health
 ## when setting this. 
-@export_range(0.0, 100.0) var damage: float = 10.0
+@export_range(1.0, 100.0) var damage: float = 10.0
 @export var cause_splatter: bool = false
 
 # Called when the node enters the scene tree for the first time.
