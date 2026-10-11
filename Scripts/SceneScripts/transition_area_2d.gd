@@ -9,6 +9,8 @@ class_name TransitionArea2D extends NearbyArea2D
 @export var outTime: float = 1.0
 
 func _unhandled_key_input(event: InputEvent) -> void:
+	if not nearby:
+		return
 	if not active:
 		return
 	if event.is_action_pressed("interact"):
