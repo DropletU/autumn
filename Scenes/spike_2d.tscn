@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://6cyugfgdpso"]
+
+[ext_resource type="Script" uid="uid://2bmhxqipq1nh" path="res://Scripts/Classes/hit_box_2d.gd" id="1_yq7m4"]
+[ext_resource type="Texture2D" uid="uid://go0vmcfx34jm" path="res://Art/Hazards/Spike.png" id="2_qjwpu"]
+
+[node name="Spike2D" type="Area2D" unique_id=1701903250]
+script = ExtResource("1_yq7m4")
+cause_splatter = true
+metadata/_custom_type_script = "uid://2bmhxqipq1nh"
+
+[node name="Spike" type="Sprite2D" parent="." unique_id=1563683796]
+texture = ExtResource("2_qjwpu")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=421864392]
+polygon = PackedVector2Array(-32, 27, 0, -27, 31, 27)
