@@ -26,11 +26,11 @@ func _on_body_entered(body: Node2D) -> void:
 	
 	shot = true
 	var arrow_instance = arrow.instantiate() as RigidBody2D
-	arrow_instance.global_rotation = global_rotation
-	arrow_instance.global_position = global_position
-	arrow_instance.shoot_strength = shoot_strength
-	arrow_instance.damage = damage
-	arrow_instance.cause_splatter = cause_splatter
-	get_tree().current_scene.add_child(arrow_instance)
+	arrow_instance.set_deferred("global_rotation", global_rotation)
+	arrow_instance.set_deferred("global_position", global_position)
+	arrow_instance.set_deferred("shoot_strength", shoot_strength)
+	arrow_instance.set_deferred("damage", damage)
+	arrow_instance.set_deferred("cause_splatter", cause_splatter)
+	get_tree().current_scene.call_deferred("add_child", arrow_instance)
 	
 	

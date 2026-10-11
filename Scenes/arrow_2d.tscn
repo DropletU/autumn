@@ -33,3 +33,4 @@ shape = SubResource("RectangleShape2D_bhunq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2074646388]
 position = Vector2(17.5, -0.5)
 shape = SubResource("RectangleShape2D_riqys")
+disabled = true

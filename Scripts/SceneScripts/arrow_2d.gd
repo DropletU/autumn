@@ -11,6 +11,8 @@ func _ready() -> void:
 	apply_central_impulse(Vector2.RIGHT.rotated(rotation)*shoot_strength)
 	hitbox.damage = damage
 	hitbox.cause_splatter = cause_splatter
+	collision_mask = 1 << 1
+	collision_layer = 0
 	
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
