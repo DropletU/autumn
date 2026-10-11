@@ -9,13 +9,13 @@ extends PlayerState
 var attacker: Node2D
 
 func enter(args: Array):
-	if args[0] is Node2D:
+	if args[0] is HitBox2D:
 		attacker = args[0]
-	
-	#if attacker is Hurtbox2D:
-		#var blood_splatter = Sprite2D.new()
-		#blood_splatter.texture = splatter_textures.pick_random()
-		#get_tree().current_scene.add_child(blood_splatter)
+		if (attacker as HitBox2D).cause_splatter:
+			var blood_splatter = Sprite2D.new()
+			blood_splatter.texture = splatter_textures.pick_random()
+			blood_splatter.global_position = player.global_position + Vector2(0, 40)
+			get_tree().current_scene.add_child(blood_splatter)
 	
 	player.velocity = Vector2.ZERO
 	player.animation.play("death")
