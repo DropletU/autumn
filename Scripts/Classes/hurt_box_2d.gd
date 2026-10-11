@@ -9,6 +9,6 @@ func _ready() -> void:
 	
 
 
-func take_damage(damage: float):
-	player.health_component.take_damage(damage)
+func take_damage(damage: float, attacker: HitBox2D):
+	player.health_component.take_damage(damage, attacker)
 	

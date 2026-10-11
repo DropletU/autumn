@@ -58,6 +58,6 @@ func get_max_health():
 	return health_component.get_max_health()
 	
 
-func _on_died(attacker: Node2D = null):
+func _on_died(attacker: HitBox2D = null):
 	state_machine.transition_to("DeadState", [attacker])
 	

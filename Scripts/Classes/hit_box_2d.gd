@@ -13,12 +13,13 @@ class_name HitBox2D extends Area2D
 func _ready() -> void:
 	collision_layer = 0
 	collision_mask = 1 << 1
-	body_entered.connect(_on_body_entered)
+	area_entered.connect(_on_area_entered)
 	
 
-func _on_body_entered(body: Node2D):
-	if body is not HurtBox2D:
+func _on_area_entered(area: Area2D):
+	if area is not HurtBox2D:
 		return
-	body = body as HurtBox2D
-	body.take_damage(damage)
+	set_deferred("monitoring", false)
+	area = area as HurtBox2D
+	area.take_damage(damage, self)
 	

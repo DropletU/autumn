@@ -37,7 +37,7 @@ signal health_set(health: float)
 ## Emits when [member _max_hp] is forcefully set
 signal max_health_changed(max_health: float)
 ## Emits when [member _hp] reaches 0
-signal died(killer: StringName)
+signal died(killer: HitBox2D)
 ## Emits when the player is revived
 signal revived
 ## Emits any time [member _hp] is changed
@@ -87,7 +87,7 @@ func set_health(amount: float) -> void:
 ## Damages the entity for [member damage] damage. 
 ## If [member damage] is greater than [member _hp],
 ## then [member _hp] will be set to [code]0[/code]
-func take_damage(damage: float, attacker: Node2D = null) -> void:
+func take_damage(damage: float, attacker: HitBox2D = null) -> void:
 	if not is_alive():
 		return
 	if damage <= 0:
