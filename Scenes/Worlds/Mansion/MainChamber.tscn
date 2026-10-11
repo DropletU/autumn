@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://eqpnvhrl3rdw" path="res://Art/BloodSplatter/BloodSplatter2.png" id="11_tvwa2"]
 [ext_resource type="Texture2D" uid="uid://cl80pstm2uy0j" path="res://Art/DoorFront.png" id="12_tvwa2"]
 [ext_resource type="PackedScene" uid="uid://c64f4gcsu0r02" path="res://Scenes/arrow_shooter_2d.tscn" id="12_ukpwg"]
+[ext_resource type="PackedScene" uid="uid://6cyugfgdpso" path="res://Scenes/spike_2d.tscn" id="13_ukpwg"]
+[ext_resource type="Script" uid="uid://bfw5njpe3mond" path="res://Scripts/SceneScripts/spike_2d.gd" id="14_231fd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
 size = Vector2(530, 20)
@@ -201,8 +203,13 @@ texture = ExtResource("12_tvwa2")
 [node name="ArrowShooter2D" parent="." unique_id=1874598257 instance=ExtResource("12_ukpwg")]
 position = Vector2(-794, 1637)
 collision_mask = 3
-shoot_strength = 400.0
+damage = 100.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D" unique_id=801645694]
 position = Vector2(255, 0)
 shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="Spike2D" parent="." unique_id=1701903250 instance=ExtResource("13_ukpwg")]
+position = Vector2(-483, 2390)
+script = ExtResource("14_231fd")
+hits_per_second = 1.0
