@@ -10,7 +10,7 @@ extends Node2D
 var CurrentIndex = -1
 var bCanContinue = true
 
-@export var NextScene = "res://Scenes/Worlds/main2.tscn"
+@export var NextScene = "res://Scenes/Worlds/Mansion/MainChamber.tscn"
 
 func _ready() -> void:
 	%Label.visible_characters = 0
