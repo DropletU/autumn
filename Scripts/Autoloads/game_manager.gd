@@ -3,6 +3,9 @@ extends Node
 var player: Player
 
 var temps_in_effect: PackedFloat32Array = []
+var key_held: bool = false
+var unlocked_transitioners: PackedInt32Array = []
+var keys_picked_up: PackedInt32Array = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -54,6 +57,22 @@ func _set_player_temp():
 	new_temp/=temps_in_effect.size()
 	player.temperature_component.change_area_temperature(new_temp)
 	temps_in_effect.clear()
+	
+
+func _on_transitioner_activated(id_number: int):
+	if id_number not in unlocked_transitioners:
+		unlocked_transitioners.append(id_number)
+	else:
+		push_warning("TransitionArea2D with ID: ", id_number, " was unlocked twice?
+		Double check if this ID number is unique!")
+	
+
+func _on_key_picked_up(id_number: int):
+	if id_number not in keys_picked_up:
+		keys_picked_up.append(id_number)
+	else:
+		push_warning("Key2D with ID: ", id_number, " was picked up twice?
+		Double check if this ID number is unique!")
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

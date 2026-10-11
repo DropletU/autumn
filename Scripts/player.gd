@@ -5,7 +5,6 @@ var respawn_point: Vector2
 
 @export var speed = 12000.0
 
-@export var key_held: bool = false
 @export var state_machine: StateMachine
 @export var health_component: HealthComponent
 @onready var animation: AnimatedSprite2D = $AnimatedSprite2D
@@ -16,11 +15,6 @@ func _ready() -> void:
 	z_index = 1
 	respawn_point = global_position
 	health_component.died.connect(_on_died)
-	
-
-func _enter_tree() -> void:
-	if key_held:
-		get_node("Key2D").global_position = $HeldObjectPosition
 	
 
 func _physics_process(delta: float) -> void:
