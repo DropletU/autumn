@@ -1,0 +1,89 @@
+[gd_scene format=4 uid="uid://cpg6jtjpko2bq"]
+
+[ext_resource type="TileSet" uid="uid://dtolpnmjv15q5" path="res://TileSets/Main.tres" id="1_4vfa1"]
+[ext_resource type="Texture2D" uid="uid://0tovl0yp4cjh" path="res://Art/Stool.png" id="2_eifig"]
+[ext_resource type="Texture2D" uid="uid://dn86jbb6hjhge" path="res://Art/Bathroom/BathroomCabinet.png" id="3_0errd"]
+[ext_resource type="Texture2D" uid="uid://dhu3dyxgik4hr" path="res://Art/Bathroom/BathroomSink.png" id="4_ajaa1"]
+[ext_resource type="Texture2D" uid="uid://d4au547pw6kte" path="res://Art/Bathroom/Bathtub.png" id="5_v7aay"]
+[ext_resource type="Texture2D" uid="uid://d3osvxxbfk8t" path="res://Art/Bathroom/Rug.png" id="6_ak8py"]
+[ext_resource type="Texture2D" uid="uid://cxala2u5tssal" path="res://Art/BloodSplatter/BloodSplatter1.png" id="7_qthft"]
+[ext_resource type="PackedScene" uid="uid://c14mfc2xctkfd" path="res://Scenes/Environment/Teleporter.tscn" id="8_0errd"]
+[ext_resource type="PackedScene" uid="uid://c5o55k0d8e4j5" path="res://Scenes/player.tscn" id="8_r33k8"]
+[ext_resource type="Texture2D" uid="uid://cae0qpeulv11t" path="res://Art/DoorBottom.png" id="10_ajaa1"]
+
+[node name="Bathroom" type="Node2D" unique_id=2047636959]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1800869363]
+tile_map_data = PackedByteArray("AAD///3/BwAAAAAAAAD///7/BwAAAAAAAAD/////BwAAAAAAAAD//wAABwAAAAAAAAAAAP3/BwAAAAAAAAAAAP7/BwAAAAAAAAAAAP//BwAAAAAAAAAAAAAABwAAAAAAAAABAP3/BwAAAAAAAAABAP7/BwAAAAAAAAABAP//BwAAAAAAAAABAAAABwAAAAAAAAACAP3/BwAAAAAAAAACAP7/BwAAAAAAAAACAP//BwAAAAAAAAACAAAABwAAAAAAAAADAP3/BwAAAAAAAAADAP7/BwAAAAAAAAADAP//BwAAAAAAAAADAAAABwAAAAAAAAAEAP3/BwAAAAAAAAAEAP7/BwAAAAAAAAAEAP//BwAAAAAAAAAEAAAABwAAAAAAAAAFAP3/BwAAAAAAAAAFAP7/BwAAAAAAAAAFAP//BwAAAAAAAAAFAAAABwAAAAAAAAAGAP3/BwAAAAAAAAAGAP7/BwAAAAAAAAAGAP//BwAAAAAAAAAGAAAABwAAAAAAAAAHAP3/BwAAAAAAAAAHAP7/BwAAAAAAAAAHAP//BwAAAAAAAAAHAAAABwAAAAAAAAAIAP3/BwAAAAAAAAAIAP7/BwAAAAAAAAAIAP//BwAAAAAAAAAIAAAABwAAAAAAAAAJAP3/BwAAAAAAAAAJAP7/BwAAAAAAAAAJAP//BwAAAAAAAAAJAAAABwAAAAAAAAD9//3/BwAAAAAAAAD9//7/BwAAAAAAAAD9////BwAAAAAAAAD9/wAABwAAAAAAAAD9/wEABwAAAAAAAAD9/wIABwAAAAAAAAD9/wMABwAAAAAAAAD+//3/BwAAAAAAAAD+//7/BwAAAAAAAAD+////BwAAAAAAAAD+/wAABwAAAAAAAAD+/wEABwAAAAAAAAD+/wIABwAAAAAAAAD+/wMABwAAAAAAAAD//wEABwAAAAAAAAD//wIABwAAAAAAAAD//wMABwAAAAAAAAAAAAEABwAAAAAAAAAAAAIABwAAAAAAAAAAAAMABwAAAAAAAAABAAEABwAAAAAAAAABAAIABwAAAAAAAAABAAMABwAAAAAAAAACAAEABwAAAAAAAAACAAIABwAAAAAAAAACAAMABwAAAAAAAAADAAEABwAAAAAAAAADAAIABwAAAAAAAAADAAMABwAAAAAAAAAEAAEABwAAAAAAAAAEAAIABwAAAAAAAAAEAAMABwAAAAAAAAAFAAEABwAAAAAAAAAFAAIABwAAAAAAAAAFAAMABwAAAAAAAAAGAAEABwAAAAAAAAAGAAIABwAAAAAAAAAGAAMABwAAAAAAAAAHAAEABwAAAAAAAAAHAAIABwAAAAAAAAAHAAMABwAAAAAAAAAIAAEABwAAAAAAAAAIAAIABwAAAAAAAAAIAAMABwAAAAAAAAAJAAEABwAAAAAAAAAJAAIABwAAAAAAAAAJAAMABwAAAAAAAAAKAP3/BwAAAAAAAAAKAP7/BwAAAAAAAAAKAP//BwAAAAAAAAAKAAAABwAAAAAAAAAKAAEABwAAAAAAAAAKAAIABwAAAAAAAAAKAAMABwAAAAAAAAD6//v/CAAAAAAAAAD6//z/BwAAAAAAAAD6//3/BwAAAAAAAAD6//7/BwAAAAAAAAD6////BwAAAAAAAAD6/wAABwAAAAAAAAD6/wEABwAAAAAAAAD6/wIABwAAAAAAAAD6/wMABwAAAAAAAAD7//v/CAAAAAAAAAD7//z/BwAAAAAAAAD7//3/BwAAAAAAAAD7//7/BwAAAAAAAAD7////BwAAAAAAAAD7/wAABwAAAAAAAAD7/wEABwAAAAAAAAD7/wIABwAAAAAAAAD7/wMABwAAAAAAAAD8//v/CAAAAAAAAAD8//z/BwAAAAAAAAD8//3/BwAAAAAAAAD8//7/BwAAAAAAAAD8////BwAAAAAAAAD8/wAABwAAAAAAAAD8/wEABwAAAAAAAAD8/wIABwAAAAAAAAD8/wMABwAAAAAAAAD9//v/CAAAAAAAAAD9//z/BwAAAAAAAAD+//v/CAAAAAAAAAD+//z/BwAAAAAAAAD///v/CAAAAAAAAAD///z/BwAAAAAAAAAAAPv/CAAAAAAAAAAAAPz/BwAAAAAAAAABAPv/CAAAAAAAAAABAPz/BwAAAAAAAAACAPv/CAAAAAAAAAACAPz/BwAAAAAAAAADAPv/CAAAAAAAAAADAPz/BwAAAAAAAAAEAPv/CAAAAAAAAAAEAPz/BwAAAAAAAAAFAPv/CAAAAAAAAAAFAPz/BwAAAAAAAAAGAPv/CAAAAAAAAAAGAPz/BwAAAAAAAAAHAPv/CAAAAAAAAAAHAPz/BwAAAAAAAAAIAPv/CAAAAAAAAAAIAPz/BwAAAAAAAAAJAPv/CAAAAAAAAAAJAPz/BwAAAAAAAAAKAPv/CAAAAAAAAAAKAPz/BwAAAAAAAAALAPv/CAAAAAAAAAALAPz/BwAAAAAAAAALAP3/BwAAAAAAAAALAP7/BwAAAAAAAAALAP//BwAAAAAAAAALAAAABwAAAAAAAAALAAEABwAAAAAAAAALAAIABwAAAAAAAAALAAMABwAAAAAAAAAMAPv/CAAAAAAAAAAMAPz/BwAAAAAAAAAMAP3/BwAAAAAAAAAMAP7/BwAAAAAAAAAMAP//BwAAAAAAAAAMAAAABwAAAAAAAAAMAAEABwAAAAAAAAAMAAIABwAAAAAAAAAMAAMABwAAAAAAAAANAPv/CAAAAAAAAAANAPz/BwAAAAAAAAANAP3/BwAAAAAAAAANAP7/BwAAAAAAAAANAP//BwAAAAAAAAANAAAABwAAAAAAAAANAAEABwAAAAAAAAANAAIABwAAAAAAAAANAAMABwAAAAAAAAD6//j/CAAAAAAAAAD6//n/CAAAAAAAAAD6//r/CAAAAAAAAAD7//j/CAAAAAAAAAD7//n/CAAAAAAAAAD7//r/CAAAAAAAAAD8//j/CAAAAAAAAAD8//n/CAAAAAAAAAD8//r/CAAAAAAAAAD9//j/CAAAAAAAAAD9//n/CAAAAAAAAAD9//r/CAAAAAAAAAD+//j/CAAAAAAAAAD+//n/CAAAAAAAAAD+//r/CAAAAAAAAAD///j/CAAAAAAAAAD///n/CAAAAAAAAAD///r/CAAAAAAAAAAAAPj/CAAAAAAAAAAAAPn/CAAAAAAAAAAAAPr/CAAAAAAAAAABAPj/CAAAAAAAAAABAPn/CAAAAAAAAAABAPr/CAAAAAAAAAACAPj/CAAAAAAAAAACAPn/CAAAAAAAAAACAPr/CAAAAAAAAAADAPj/CAAAAAAAAAADAPn/CAAAAAAAAAADAPr/CAAAAAAAAAAEAPj/CAAAAAAAAAAEAPn/CAAAAAAAAAAEAPr/CAAAAAAAAAAFAPj/CAAAAAAAAAAFAPn/CAAAAAAAAAAFAPr/CAAAAAAAAAAGAPj/CAAAAAAAAAAGAPn/CAAAAAAAAAAGAPr/CAAAAAAAAAAHAPj/CAAAAAAAAAAHAPn/CAAAAAAAAAAHAPr/CAAAAAAAAAAIAPj/CAAAAAAAAAAIAPn/CAAAAAAAAAAIAPr/CAAAAAAAAAAJAPj/CAAAAAAAAAAJAPn/CAAAAAAAAAAJAPr/CAAAAAAAAAAKAPj/CAAAAAAAAAAKAPn/CAAAAAAAAAAKAPr/CAAAAAAAAAALAPj/CAAAAAAAAAALAPn/CAAAAAAAAAALAPr/CAAAAAAAAAAMAPj/CAAAAAAAAAAMAPn/CAAAAAAAAAAMAPr/CAAAAAAAAAANAPj/CAAAAAAAAAANAPn/CAAAAAAAAAANAPr/CAAAAAAAAAA=")
+tile_set = ExtResource("1_4vfa1")
+
+[node name="Stool" type="Sprite2D" parent="." unique_id=630515241]
+position = Vector2(-318, -238)
+texture = ExtResource("2_eifig")
+
+[node name="BathroomCabinet" type="Sprite2D" parent="." unique_id=2072061183]
+position = Vector2(-180, -285)
+texture = ExtResource("3_0errd")
+
+[node name="BathroomSink" type="Sprite2D" parent="." unique_id=995102762]
+position = Vector2(113, -267)
+texture = ExtResource("4_ajaa1")
+
+[node name="BathroomSink2" type="Sprite2D" parent="." unique_id=906402941]
+position = Vector2(211, -270)
+texture = ExtResource("4_ajaa1")
+
+[node name="BathroomSink3" type="Sprite2D" parent="." unique_id=1686058072]
+position = Vector2(305, -271)
+texture = ExtResource("4_ajaa1")
+
+[node name="Bathtub" type="Sprite2D" parent="." unique_id=1122051477]
+position = Vector2(302, 39)
+texture = ExtResource("5_v7aay")
+
+[node name="Rug" type="Sprite2D" parent="." unique_id=1440319180]
+position = Vector2(299, 76)
+texture = ExtResource("6_ak8py")
+
+[node name="BloodSplatter1" type="Sprite2D" parent="." unique_id=123063660]
+position = Vector2(223.99998, 58.000004)
+rotation = -1.0245026
+texture = ExtResource("7_qthft")
+
+[node name="BloodSplatter2" type="Sprite2D" parent="." unique_id=1522307221]
+position = Vector2(276, -26)
+rotation = 2.388131
+texture = ExtResource("7_qthft")
+
+[node name="BloodSplatter3" type="Sprite2D" parent="." unique_id=1097885477]
+position = Vector2(409, -44)
+texture = ExtResource("7_qthft")
+
+[node name="BloodSplatter4" type="Sprite2D" parent="." unique_id=1852177169]
+position = Vector2(435, 95)
+texture = ExtResource("7_qthft")
+
+[node name="BloodSplatter5" type="Sprite2D" parent="." unique_id=548613467]
+position = Vector2(261, 156)
+texture = ExtResource("7_qthft")
+
+[node name="BloodSplatter6" type="Sprite2D" parent="." unique_id=255039132]
+position = Vector2(361, 136)
+texture = ExtResource("7_qthft")
+
+[node name="BloodSplatter7" type="Sprite2D" parent="." unique_id=1796210143]
+position = Vector2(220, -101)
+rotation = -0.7853982
+texture = ExtResource("7_qthft")
+
+[node name="Teleporter" parent="." unique_id=718898599 instance=ExtResource("8_0errd")]
+position = Vector2(-218, 229)
+transition_to = "C:/Users/16048/Documents/dev/autumn/Scenes/Worlds/Mansion/MainChamber.tscn"
+transition_pos = Vector2(4158, -1191)
+
+[node name="Player" parent="." unique_id=932062855 instance=ExtResource("8_r33k8")]
+position = Vector2(-228, 140)
+
+[node name="DoorBottom" type="Sprite2D" parent="." unique_id=1436225219]
+position = Vector2(-217, 170)
+texture = ExtResource("10_ajaa1")

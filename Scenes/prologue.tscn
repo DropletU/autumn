@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cnma2s5hmou01"]
 
-[ext_resource type="Script" uid="uid://cvbncaamg3e0i" path="res://Scripts/SceneScripts/Prologue.gd" id="1_ctcux"]
+[ext_resource type="Script" uid="uid://cvbncaamg3e0i" path="res://Scripts/SceneScripts/CutScene.gd" id="1_ctcux"]
 [ext_resource type="Texture2D" uid="uid://utu1v3vou6i0" path="res://Art/DialogueTick.png" id="2_4ckav"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7f0hl"]
