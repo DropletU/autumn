@@ -2,8 +2,21 @@ extends PlayerState
 
 @export var dead_duration: float = 1.0
 
-func enter():
+@onready var splatter_textures: Array = [
+	preload("res://Art/BloodSplatter/BloodSplatter1.png"),
+	preload("res://Art/BloodSplatter/BloodSplatter2.png")
+]
+var attacker: Node2D
+
 func enter(args: Array):
+	if args[0] is Node2D:
+		attacker = args[0]
+	
+	#if attacker is Hurtbox2D:
+		#var blood_splatter = Sprite2D.new()
+		#blood_splatter.texture = splatter_textures.pick_random()
+		#get_tree().current_scene.add_child(blood_splatter)
+	
 	player.velocity = Vector2.ZERO
 	player.animation.play("death")
 	await player.animation.animation_finished
