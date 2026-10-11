@@ -21,7 +21,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		return
 	if event.is_action_pressed("interact"):
 		marker_position = GameManager.player.get_node("HeldObjectPosition")
-		GameManager.key_held = true
+		GameManager.keys_held += 1
 		key_picked_up.emit(uid)
 		z_index = 2
 	

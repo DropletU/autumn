@@ -28,9 +28,9 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		return
 	if event.is_action_pressed("interact", false):
 		if not active:
-			if GameManager.key_held:
+			if GameManager.keys_held:
 				active = true
-				GameManager.key_held = false
+				GameManager.keys_held -= 1
 				activated.emit(uid)
 			return
 		GameManager.enter_new_room(transition_to, transition_pos, fade_to, inTime, outTime)

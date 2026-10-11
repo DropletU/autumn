@@ -3,7 +3,7 @@ extends Node
 var player: Player
 
 var temps_in_effect: PackedFloat32Array = []
-var key_held: bool = false
+var keys_held: int = 0
 var unlocked_transitioners: PackedInt32Array = []
 var keys_picked_up: PackedInt32Array = []
 var player_temp: float
