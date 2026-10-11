@@ -8,6 +8,7 @@ size = Vector2(175, 175)
 
 [node name="Key2D" type="Area2D" unique_id=1049642994]
 script = ExtResource("1_y15k4")
+interactable = true
 metadata/_custom_type_script = "uid://cb8i15odjqjrs"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=328979227]
