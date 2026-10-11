@@ -3,7 +3,6 @@
 [ext_resource type="TileSet" uid="uid://dtolpnmjv15q5" path="res://TileSets/Main.tres" id="1_j3l7n"]
 [ext_resource type="PackedScene" uid="uid://c5o55k0d8e4j5" path="res://Scenes/player.tscn" id="2_0bc6q"]
 [ext_resource type="PackedScene" uid="uid://bw8ee2l6m1sdx" path="res://Scenes/fire_place.tscn" id="3_0bc6q"]
-[ext_resource type="Texture2D" uid="uid://ynjmvvxiqinu" path="res://Art/Overlay/HeatOverlay.png" id="4_dptcd"]
 [ext_resource type="PackedScene" uid="uid://dymle5maypjx4" path="res://Scenes/key_2d.tscn" id="5_t6qia"]
 [ext_resource type="PackedScene" uid="uid://c14mfc2xctkfd" path="res://Scenes/Environment/Teleporter.tscn" id="6_r5jlj"]
 [ext_resource type="PackedScene" uid="uid://cabbntt5mibuw" path="res://Scenes/Environment/BookShelf.tscn" id="7_imbot"]
@@ -33,13 +32,6 @@ position = Vector2(5513, -1263)
 
 [node name="FirePlace4" parent="." unique_id=901278387 instance=ExtResource("3_0bc6q")]
 position = Vector2(7590, 299)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1147897268]
-
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=436881329]
-offset_right = 40.0
-offset_bottom = 40.0
-texture = ExtResource("4_dptcd")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=289044734]
 color = Color(0.07525144, 0.13421229, 0.31823575, 1)
