@@ -1,6 +1,6 @@
 extends PlayerState
 
-func enter(args: Array):
+func enter(_args: Array):
 	player.velocity = Vector2.ZERO
 	player.animation.speed_scale = 1
 	player.animation.play("default")
