@@ -18,6 +18,11 @@ func _ready() -> void:
 	health_component.died.connect(_on_died)
 	
 
+func _enter_tree() -> void:
+	if key_held:
+		get_node("Key2D").global_position = $HeldObjectPosition
+	
+
 func _physics_process(delta: float) -> void:
 	state_machine.physics_update(delta)
 	if not health_component.is_alive():

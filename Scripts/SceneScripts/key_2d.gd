@@ -13,6 +13,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
 		marker_position = GameManager.player.get_node("HeldObjectPosition")
 		GameManager.player.key_held = true
+		reparent(GameManager.player)
 		z_index = 2
 	
 
