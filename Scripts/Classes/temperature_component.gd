@@ -12,10 +12,11 @@ func _physics_process(delta: float) -> void:
 		feeling_cold = true
 	else:
 		feeling_cold = false
+	update_area_temp()
 	
 
-func change_area_temperature(new_temp):
-	area_temperature = new_temp
+func update_area_temp():
+	area_temperature = GameManager.player_temp
 	
 
 func get_healing():

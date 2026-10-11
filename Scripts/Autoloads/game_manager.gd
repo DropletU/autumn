@@ -6,6 +6,8 @@ var temps_in_effect: PackedFloat32Array = []
 var key_held: bool = false
 var unlocked_transitioners: PackedInt32Array = []
 var keys_picked_up: PackedInt32Array = []
+var player_temp: float
+var player_hp: float = player.get_max_health() if player else 100.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -55,7 +57,7 @@ func _set_player_temp():
 	for temp in temps_in_effect:
 		new_temp+=temp
 	new_temp/=temps_in_effect.size()
-	player.temperature_component.change_area_temperature(new_temp)
+	player_temp = new_temp
 	temps_in_effect.clear()
 	
 

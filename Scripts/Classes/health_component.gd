@@ -44,14 +44,14 @@ signal revived
 signal health_changed(new_hp: float)
 
 func _ready() -> void:
-	if _hp > _max_hp:
-		_change_health(minf(_hp, _max_hp))
+	_change_health(clampf(GameManager.player_hp, 0.0, _max_hp))
 	
 
 func _change_health(new_health: float) -> void:
 	if not is_alive():
 		return
-	_hp = new_health
+	GameManager.player_hp = new_health
+	_hp = GameManager.player_hp
 	health_changed.emit(new_health)
 	
 
