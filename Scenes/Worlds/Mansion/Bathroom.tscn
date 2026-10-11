@@ -78,7 +78,7 @@ texture = ExtResource("7_qthft")
 
 [node name="Teleporter" parent="." unique_id=718898599 instance=ExtResource("8_0errd")]
 position = Vector2(-218, 229)
-transition_to = "C:/Users/16048/Documents/dev/autumn/Scenes/Worlds/Mansion/MainChamber.tscn"
+transition_to = "/Mansion/MainChamber.tscn"
 transition_pos = Vector2(4158, -1191)
 
 [node name="Player" parent="." unique_id=932062855 instance=ExtResource("8_r33k8")]

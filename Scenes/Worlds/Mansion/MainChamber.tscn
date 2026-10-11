@@ -48,8 +48,8 @@ color = Color(0.07525144, 0.13421229, 0.31823575, 1)
 position = Vector2(-1191, 2178)
 
 [node name="Teleporter" parent="." unique_id=718898599 instance=ExtResource("6_r5jlj")]
-position = Vector2(4158, -1191)
-transition_to = "C:/Users/16048/Documents/dev/autumn/Scenes/Worlds/Mansion/Bathroom.tscn"
+position = Vector2(4166, -1182)
+transition_to = "/Mansion/Bathroom.tscn"
 transition_pos = Vector2(-228, 140)
 
 [node name="BookShelf" parent="." unique_id=2144862585 instance=ExtResource("7_imbot")]
@@ -201,3 +201,9 @@ texture = ExtResource("11_tvwa2")
 [node name="DoorFront" type="Sprite2D" parent="." unique_id=470583488]
 position = Vector2(4163, -1301)
 texture = ExtResource("12_tvwa2")
+
+[node name="Teleporter2" parent="." unique_id=389255538 instance=ExtResource("6_r5jlj")]
+position = Vector2(-904, 2094)
+active = false
+transition_to = "/Mansion/Bathroom.tscn"
+uid = 1
