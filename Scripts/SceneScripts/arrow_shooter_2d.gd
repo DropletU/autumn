@@ -24,6 +24,8 @@ func _on_body_entered(body: Node2D) -> void:
 	if not body.is_in_group("Player"):
 		return
 	
+	# Play Audio Here: Arrow Shooting
+	
 	shot = true
 	var arrow_instance = arrow.instantiate() as RigidBody2D
 	arrow_instance.set_deferred("global_rotation", global_rotation)

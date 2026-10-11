@@ -1,12 +1,15 @@
 extends PlayerState
 
+var footstep_delay: float = 0.35
+var footstep_timer: float = 0.0
+
 func enter(_args: Array):
 	player.animation.speed_scale = 1
 	player.animation.play("walk")
 	
 
 func exit():
-	pass # Runs when exiting the state
+	footstep_timer = 0.0
 	
 
 func physics_update(delta: float):
@@ -20,6 +23,11 @@ func physics_update(delta: float):
 		player.animation.flip_h = true
 	player.velocity = direction*player.speed*delta
 	player.move_and_slide()
+	footstep_timer+=delta
+	if footstep_timer >= footstep_delay:
+		pass
+		# Play Audio Here: Footstep Audio
+		
 	
 
 func unhandled_input(event: InputEvent):

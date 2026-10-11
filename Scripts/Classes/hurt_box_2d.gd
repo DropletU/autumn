@@ -10,5 +10,8 @@ func _ready() -> void:
 
 
 func take_damage(damage: float, attacker: HitBox2D):
+	
+	# Play Audio Here: Taking Damage
+	
 	player.health_component.take_damage(damage, attacker)
 	

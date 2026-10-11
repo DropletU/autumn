@@ -17,6 +17,8 @@ func enter(args: Array):
 			blood_splatter.global_position = player.global_position + Vector2(0, 40)
 			get_tree().current_scene.add_child(blood_splatter)
 	
+	# Play Audio Here: Died Audio
+	
 	player.velocity = Vector2.ZERO
 	player.animation.play("death")
 	await player.animation.animation_finished

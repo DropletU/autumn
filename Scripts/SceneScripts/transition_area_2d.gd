@@ -13,6 +13,8 @@ class_name TransitionArea2D extends NearbyArea2D
 @export var fade_to: Color = Color.BLACK
 @export var inTime: float = 1.0
 @export var outTime: float = 1.0
+@export var audio: AudioStreamMP3
+@export var unlock_audio: AudioStreamMP3
 
 signal activated(id_number: int)
 
@@ -31,7 +33,9 @@ func _unhandled_key_input(event: InputEvent) -> void:
 			if GameManager.keys_held:
 				active = true
 				GameManager.keys_held -= 1
+				# Play Audio Here: Unlock Audio
 				activated.emit(uid)
 			return
+		# Play Audio Here: Play [member audio]
 		GameManager.enter_new_room(transition_to, transition_pos, fade_to, inTime, outTime)
 	
