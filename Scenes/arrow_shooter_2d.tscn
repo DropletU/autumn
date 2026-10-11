@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://c64f4gcsu0r02"]
+
+[ext_resource type="Script" uid="uid://dcx5rt85ag45n" path="res://Scripts/SceneScripts/arrow_shooter_2d.gd" id="1_rke0c"]
+[ext_resource type="Texture2D" uid="uid://go0vmcfx34jm" path="res://Art/Hazards/Spike.png" id="2_ac7xv"]
+
+[node name="ArrowShooter2D" type="Area2D" unique_id=1874598257]
+script = ExtResource("1_rke0c")
+metadata/_custom_type_script = "uid://cb8i15odjqjrs"
+
+[node name="Spike" type="Sprite2D" parent="." unique_id=1364597010]
+rotation = 1.5707964
+texture = ExtResource("2_ac7xv")
