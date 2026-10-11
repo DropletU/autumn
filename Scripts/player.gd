@@ -59,5 +59,5 @@ func get_max_health():
 	
 
 func _on_died(attacker: Node2D = null):
-	state_machine.transition_to("DeadState")
+	state_machine.transition_to("DeadState", [attacker])
 	
