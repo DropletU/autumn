@@ -3,6 +3,7 @@ extends PlayerState
 @export var dead_duration: float = 1.0
 
 func enter():
+func enter(args: Array):
 	player.velocity = Vector2.ZERO
 	player.animation.play("death")
 	await player.animation.animation_finished

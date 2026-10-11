@@ -1,6 +1,6 @@
 extends PlayerState
 
-func enter():
+func enter(args: Array):
 	player.animation.speed_scale = 1.5
 	player.animation.play("walk")
 	

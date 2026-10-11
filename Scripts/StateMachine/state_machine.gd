@@ -20,11 +20,11 @@ func unhandled_input(event: InputEvent) -> void:
 	current_state.unhandled_input(event)
 	
 
-func transition_to(state_name: String):
+func transition_to(state_name: String, args: Array = []):
 	var new_state = get_node_or_null(state_name)
 	if new_state == null or new_state == current_state:
 		return
 	current_state.exit()
 	current_state = new_state
-	current_state.enter()
+	current_state.enter(args)
 	

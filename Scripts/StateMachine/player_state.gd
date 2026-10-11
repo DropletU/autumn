@@ -5,7 +5,7 @@ var player: Player
 @warning_ignore("unused_signal")
 signal transition(new_state: String)
 
-func enter(): pass
+func enter(_args: Array): pass
 func exit(): pass
 func physics_update(_delta: float): pass
 func unhandled_input(_event: InputEvent): pass
