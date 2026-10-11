@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dco1lgxmqfgqh"]
+
+[ext_resource type="Script" uid="uid://c2w6ec00d5xw8" path="res://Scripts/Autoloads/AudioManager.gd" id="1_7axng"]
+
+[node name="AudioManager" type="Node2D" unique_id=1760320099]
+script = ExtResource("1_7axng")
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="." unique_id=951380244]
+
+[node name="TemperaturePlayer" type="AudioStreamPlayer2D" parent="." unique_id=1898201541]
