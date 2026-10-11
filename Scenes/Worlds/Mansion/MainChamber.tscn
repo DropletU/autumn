@@ -11,6 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://cxala2u5tssal" path="res://Art/BloodSplatter/BloodSplatter1.png" id="10_cbae1"]
 [ext_resource type="Texture2D" uid="uid://eqpnvhrl3rdw" path="res://Art/BloodSplatter/BloodSplatter2.png" id="11_tvwa2"]
 [ext_resource type="Texture2D" uid="uid://cl80pstm2uy0j" path="res://Art/DoorFront.png" id="12_tvwa2"]
+[ext_resource type="PackedScene" uid="uid://c64f4gcsu0r02" path="res://Scenes/arrow_shooter_2d.tscn" id="12_ukpwg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
+size = Vector2(530, 20)
 
 [node name="MainChamber" type="Node2D" unique_id=1228869116]
 
@@ -193,3 +197,12 @@ texture = ExtResource("11_tvwa2")
 [node name="DoorFront" type="Sprite2D" parent="." unique_id=470583488]
 position = Vector2(4163, -1301)
 texture = ExtResource("12_tvwa2")
+
+[node name="ArrowShooter2D" parent="." unique_id=1874598257 instance=ExtResource("12_ukpwg")]
+position = Vector2(-794, 1637)
+collision_mask = 3
+shoot_strength = 400.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D" unique_id=801645694]
+position = Vector2(255, 0)
+shape = SubResource("RectangleShape2D_bhunq")
