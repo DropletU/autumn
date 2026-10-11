@@ -201,9 +201,3 @@ texture = ExtResource("11_tvwa2")
 [node name="DoorFront" type="Sprite2D" parent="." unique_id=470583488]
 position = Vector2(4163, -1301)
 texture = ExtResource("12_tvwa2")
-
-[node name="Teleporter2" parent="." unique_id=389255538 instance=ExtResource("6_r5jlj")]
-position = Vector2(-904, 2094)
-active = false
-transition_to = "/Mansion/Bathroom.tscn"
-uid = 1
