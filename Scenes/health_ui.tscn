@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://chi2onttuycfj"]
+
+[ext_resource type="Script" uid="uid://g3mdmqyichpw" path="res://Scripts/SceneScripts/health_ui.gd" id="1_fwugr"]
+
+[node name="HealthUI" type="CanvasLayer" unique_id=313854499]
+script = ExtResource("1_fwugr")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=978319485]
+offset_right = 155.0
+offset_bottom = 38.0
+
+[node name="ProgressBar" type="ProgressBar" parent="PanelContainer" unique_id=799196783]
+layout_mode = 2
+size_flags_vertical = 1
+value = 50.0
+show_percentage = false
