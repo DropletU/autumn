@@ -1,6 +1,9 @@
 class_name TransitionArea2D extends NearbyArea2D
 
 @export var active: bool = true
+## Must be the full name from after Worlds in the file system. [br]
+## For example, if you want the MainChamber, you write: [br]
+## /Mansion/MainChamber.tscn
 @export var transition_to: String
 @export var transition_pos: Vector2
 @export_group("Transition Effects")
