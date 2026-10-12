@@ -11,4 +11,4 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	var player_health_percent: float = GameManager.player_health() / GameManager.player_max_health()
 	progress_bar.value = player_health_percent*100
-	
+	progress_bar.modulate = lerp(Color.BLUE, Color.ORANGE, player_health_percent)

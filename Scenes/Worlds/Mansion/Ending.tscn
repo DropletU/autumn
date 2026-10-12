@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://hud4xj8khrk"]
 
-[ext_resource type="Script" uid="uid://cvbncaamg3e0i" path="res://Scripts/SceneScripts/CutScene.gd" id="1_j7kmc"]
-[ext_resource type="Texture2D" uid="uid://utu1v3vou6i0" path="res://Art/DialogueTick.png" id="2_gfgbn"]
+[ext_resource type="Script" uid="uid://cvbncaamg3e0i" path="res://Scripts/SceneScripts/CutScene.gd" id="1_ksoyt"]
+[ext_resource type="Texture2D" uid="uid://utu1v3vou6i0" path="res://Art/DialogueTick.png" id="2_yvry8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7f0hl"]
 bg_color = Color(1, 1, 1, 1)
@@ -43,8 +43,8 @@ _data = {
 &"anim": SubResource("Animation_u0vu3")
 }
 
-[node name="Node2D" type="Node2D" unique_id=87981440]
-script = ExtResource("1_j7kmc")
+[node name="Node2D2" type="Node2D" unique_id=87981440]
+script = ExtResource("1_ksoyt")
 Lines = ["Finally. I am out.", "Free.", "I Need to find my way back home now."]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1288516553]
@@ -97,7 +97,7 @@ offset_right = 20.0
 offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 0
-texture = ExtResource("2_gfgbn")
+texture = ExtResource("2_yvry8")
 
 [node name="Label" type="Label" parent="CanvasLayer/Panel/Continue" unique_id=1358487046]
 layout_mode = 1

@@ -21,6 +21,7 @@ func _physics_process(delta: float) -> void:
 	state_machine.physics_update(delta)
 	if not health_component.is_alive():
 		return
+	$BreathParticles.emitting = temperature_component.get_freezing() and health_component.is_alive()
 	if temperature_component.get_freezing():
 		health_component.take_damage(temperature_component.get_freeze_damage())
 	else:
