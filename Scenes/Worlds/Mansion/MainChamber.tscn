@@ -315,8 +315,10 @@ texture = ExtResource("15_ww8k3")
 
 [node name="Area2D" type="Area2D" parent="LockedDoor" unique_id=317550706]
 script = ExtResource("16_q5cqd")
-transition_to = "Mansion/Ending.tscn"
+active = false
+transition_to = "/Mansion/Ending.tscn"
 uid = 1
+interactable = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LockedDoor/Area2D" unique_id=1911079774]
 position = Vector2(0, 125)

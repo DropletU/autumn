@@ -1,5 +1,8 @@
 class_name TransitionArea2D extends NearbyArea2D
 
+
+var door = load("res://Art/DoorFront.png")
+
 @export var active: bool = true
 ## Must be the full name from after Worlds in the file system. [br]
 ## For example, if you want the MainChamber, you write: [br]
@@ -34,6 +37,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 				active = true
 				GameManager.keys_held -= 1
 				# Play Audio Here: Unlock Audio
+				get_parent().texture = door
 				activated.emit(uid)
 			return
 		# Play Audio Here: Play [member audio]
