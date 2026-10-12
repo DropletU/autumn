@@ -1,16 +1,32 @@
 [gd_scene format=3 uid="uid://chi2onttuycfj"]
 
 [ext_resource type="Script" uid="uid://g3mdmqyichpw" path="res://Scripts/SceneScripts/health_ui.gd" id="1_fwugr"]
+[ext_resource type="Texture2D" uid="uid://cequojrvcxc3w" path="res://Art/Overlay/Fire.png" id="2_mxkyl"]
 
 [node name="HealthUI" type="CanvasLayer" unique_id=313854499]
 script = ExtResource("1_fwugr")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=978319485]
-offset_right = 155.0
-offset_bottom = 38.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -77.5
+offset_top = 66.0
+offset_right = 77.5
+offset_bottom = 104.0
+grow_horizontal = 2
 
 [node name="ProgressBar" type="ProgressBar" parent="PanelContainer" unique_id=799196783]
 layout_mode = 2
 size_flags_vertical = 1
 value = 50.0
 show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1826510013]
+offset_left = 458.0
+offset_top = 67.0
+offset_right = 496.0
+offset_bottom = 105.0
+texture = ExtResource("2_mxkyl")
+expand_mode = 2
+stretch_mode = 5

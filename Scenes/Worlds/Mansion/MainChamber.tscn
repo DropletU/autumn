@@ -14,9 +14,14 @@
 [ext_resource type="PackedScene" uid="uid://c64f4gcsu0r02" path="res://Scenes/arrow_shooter_2d.tscn" id="12_ukpwg"]
 [ext_resource type="PackedScene" uid="uid://6cyugfgdpso" path="res://Scenes/spike_2d.tscn" id="13_ukpwg"]
 [ext_resource type="Script" uid="uid://bfw5njpe3mond" path="res://Scripts/SceneScripts/spike_2d.gd" id="14_231fd"]
+[ext_resource type="Texture2D" uid="uid://dw43xif3wn51v" path="res://Art/LockedDoor.png" id="15_ww8k3"]
+[ext_resource type="Script" uid="uid://cdt8a564pw6rr" path="res://Scripts/SceneScripts/transition_area_2d.gd" id="16_q5cqd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
 size = Vector2(530, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7f0hl"]
+size = Vector2(200, 80)
 
 [node name="MainChamber" type="Node2D" unique_id=1228869116]
 
@@ -37,13 +42,14 @@ position = Vector2(1558, -84)
 position = Vector2(5513, -1263)
 
 [node name="FirePlace4" parent="." unique_id=901278387 instance=ExtResource("3_0bc6q")]
-position = Vector2(7590, 299)
+position = Vector2(7084, 234)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=289044734]
 color = Color(0.07525144, 0.13421229, 0.31823575, 1)
 
 [node name="Key2D" parent="." unique_id=1049642994 instance=ExtResource("5_t6qia")]
 position = Vector2(-1191, 2178)
+uid = 1
 
 [node name="Teleporter" parent="." unique_id=718898599 instance=ExtResource("6_r5jlj")]
 position = Vector2(4166, -1182)
@@ -209,7 +215,109 @@ damage = 100.0
 position = Vector2(255, 0)
 shape = SubResource("RectangleShape2D_bhunq")
 
+[node name="ArrowShooter2D2" parent="." unique_id=175022543 instance=ExtResource("12_ukpwg")]
+position = Vector2(-794, 1745)
+collision_mask = 3
+damage = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D2" unique_id=581688964]
+position = Vector2(255, 0)
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="ArrowShooter2D3" parent="." unique_id=1082895384 instance=ExtResource("12_ukpwg")]
+position = Vector2(-794, 1525)
+collision_mask = 3
+damage = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D3" unique_id=1036671974]
+position = Vector2(255, 0)
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="ArrowShooter2D4" parent="." unique_id=946341998 instance=ExtResource("12_ukpwg")]
+position = Vector2(1183, 854.0001)
+rotation = -1.8325958
+collision_mask = 3
+damage = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D4" unique_id=517589942]
+position = Vector2(255, 0)
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="ArrowShooter2D5" parent="." unique_id=409335602 instance=ExtResource("12_ukpwg")]
+position = Vector2(1785, 714.00006)
+rotation = -1.8325958
+collision_mask = 3
+damage = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D5" unique_id=2140474053]
+position = Vector2(255, 0)
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="ArrowShooter2D6" parent="." unique_id=545701349 instance=ExtResource("12_ukpwg")]
+position = Vector2(1448.0001, 857.00006)
+rotation = -1.8325958
+collision_mask = 3
+damage = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D6" unique_id=1565271472]
+position = Vector2(255, 0)
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="ArrowShooter2D7" parent="." unique_id=1787294301 instance=ExtResource("12_ukpwg")]
+position = Vector2(3764, -36)
+rotation = -2.997632
+collision_mask = 3
+damage = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D7" unique_id=75833335]
+position = Vector2(242.67477, -207.96635)
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="ArrowShooter2D8" parent="." unique_id=397217822 instance=ExtResource("12_ukpwg")]
+position = Vector2(2970.9998, 496)
+rotation = -2.386325
+collision_mask = 3
+damage = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D8" unique_id=704979597]
+position = Vector2(-55.36792, 898.17957)
+rotation = -0.50981283
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="ArrowShooter2D9" parent="." unique_id=572958313 instance=ExtResource("12_ukpwg")]
+position = Vector2(2258, 714.0001)
+rotation = -1.4974742
+collision_mask = 3
+damage = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D9" unique_id=1239886032]
+position = Vector2(255, 0)
+shape = SubResource("RectangleShape2D_bhunq")
+
+[node name="ArrowShooter2D10" parent="." unique_id=1872010041 instance=ExtResource("12_ukpwg")]
+position = Vector2(2995.0002, -591)
+rotation = -0.14703679
+collision_mask = 3
+damage = 100.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D10" unique_id=2037428462]
+position = Vector2(255, 0)
+shape = SubResource("RectangleShape2D_bhunq")
+
 [node name="Spike2D" parent="." unique_id=1701903250 instance=ExtResource("13_ukpwg")]
 position = Vector2(-483, 2390)
 script = ExtResource("14_231fd")
 hits_per_second = 1.0
+
+[node name="LockedDoor" type="Sprite2D" parent="." unique_id=177242645]
+position = Vector2(7386, 231)
+texture = ExtResource("15_ww8k3")
+
+[node name="Area2D" type="Area2D" parent="LockedDoor" unique_id=317550706]
+script = ExtResource("16_q5cqd")
+transition_to = "Mansion/Ending.tscn"
+uid = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LockedDoor/Area2D" unique_id=1911079774]
+position = Vector2(0, 125)
+shape = SubResource("RectangleShape2D_7f0hl")

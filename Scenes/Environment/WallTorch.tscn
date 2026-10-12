@@ -2,8 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://de30mrct5k2tl" path="res://Art/WallTorch.png" id="1_fp6sl"]
 [ext_resource type="Texture2D" uid="uid://cejqb2amnv0l7" path="res://Art/Light.png" id="2_5blmf"]
+[ext_resource type="Script" uid="uid://ciusurfrv75ku" path="res://Scripts/Classes/hot_body_2d.gd" id="3_5blmf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fp6sl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7f0hl"]
+radius = 286.24814
 
 [node name="WallTorch" type="StaticBody2D" unique_id=2144862585]
 
@@ -17,3 +21,11 @@ shape = SubResource("CircleShape2D_fp6sl")
 energy = 0.2
 texture = ExtResource("2_5blmf")
 texture_scale = 4.0
+
+[node name="HotBody2D" type="Area2D" parent="." unique_id=1415207686]
+script = ExtResource("3_5blmf")
+temperature = 40.0
+metadata/_custom_type_script = "uid://ciusurfrv75ku"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HotBody2D" unique_id=1889690407]
+shape = SubResource("CircleShape2D_7f0hl")

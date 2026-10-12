@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bxo72xswpvrri" path="res://Art/Animation/PlayerWalk.png" id="9_f1ek2"]
 [ext_resource type="Script" uid="uid://jd3hy5lh04dl" path="res://Scripts/Classes/temperature_component.gd" id="11_gymyn"]
 [ext_resource type="Script" uid="uid://cubrn3ctispxc" path="res://Scripts/Classes/hurt_box_2d.gd" id="13_ukyrk"]
+[ext_resource type="Texture2D" uid="uid://b22lqmqnskwem" path="res://Art/Particle/BreatheParticle.png" id="14_7dp3o"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wrdhp"]
 radius = 25.0
@@ -89,6 +90,10 @@ animations = [{
 radius = 16.0
 height = 126.0
 
+[sub_resource type="Gradient" id="Gradient_7f0hl"]
+offsets = PackedFloat32Array(0.008547009, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.21176471)
+
 [node name="Player" type="CharacterBody2D" unique_id=932062855 node_paths=PackedStringArray("state_machine", "health_component") groups=["Player"]]
 script = ExtResource("1_v0iea")
 state_machine = NodePath("StateMachine")
@@ -145,3 +150,15 @@ metadata/_custom_type_script = "uid://cubrn3ctispxc"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox2D" unique_id=171493700]
 position = Vector2(0, -8)
 shape = SubResource("CapsuleShape2D_bhunq")
+
+[node name="BreathParticles" type="CPUParticles2D" parent="." unique_id=1436565498]
+show_behind_parent = true
+position = Vector2(2, -82)
+texture = ExtResource("14_7dp3o")
+lifetime = 0.3
+emission_shape = 3
+emission_rect_extents = Vector2(30, 1)
+gravity = Vector2(0, -800)
+scale_amount_min = 0.1
+scale_amount_max = 0.3
+color_ramp = SubResource("Gradient_7f0hl")

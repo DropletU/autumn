@@ -30,7 +30,7 @@ func PlayNextLine():
 	CurrentIndex += 1
 	bCanContinue = false
 	if CurrentIndex > Lines.size() - 1:
-		await GameManager.enter_new_room(NextScene, Vector2(63, 16), Color.WHITE, 1.2)
+		await GameManager.enter_new_room(NextScene, Vector2(-1589,2246), Color.WHITE, 1.2)
 		return
 	
 	
