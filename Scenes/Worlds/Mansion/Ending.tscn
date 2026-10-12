@@ -46,6 +46,7 @@ _data = {
 [node name="Node2D2" type="Node2D" unique_id=87981440]
 script = ExtResource("1_ksoyt")
 Lines = ["Finally. I am out.", "Free.", "I Need to find my way back home now."]
+ending = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1288516553]
 

@@ -39,7 +39,8 @@ func enter_new_room(scene: String, new_pos: Vector2, fadeColor: Color = Color.BL
 	
 	await get_tree().scene_changed
 	if not get_tree().current_scene.has_node("Player"):
-		get_tree().current_scene.add_child(player)
+		if player:
+			get_tree().current_scene.add_child(player)
 	if player: player.global_position = new_pos
 	
 	await TransitionScreen.EndTransition(outTime)
