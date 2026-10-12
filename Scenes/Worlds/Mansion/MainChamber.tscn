@@ -23,6 +23,10 @@ size = Vector2(530, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7f0hl"]
 size = Vector2(200, 80)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_bhunq"]
+a = Vector2(1540.5452, 248.37393)
+b = Vector2(1621.1609, -192.76675)
+
 [node name="MainChamber" type="Node2D" unique_id=1228869116]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=935385841]
@@ -30,7 +34,7 @@ tile_map_data = PackedByteArray("AAD+////AAAAAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAAAAAA
 tile_set = ExtResource("1_j3l7n")
 
 [node name="Player" parent="." unique_id=932062855 instance=ExtResource("2_0bc6q")]
-position = Vector2(-1589, 2246)
+position = Vector2(3159, -610)
 
 [node name="FirePlace" parent="." unique_id=592339634 instance=ExtResource("3_0bc6q")]
 position = Vector2(-1137, 1959)
@@ -208,100 +212,96 @@ texture = ExtResource("12_tvwa2")
 
 [node name="ArrowShooter2D" parent="." unique_id=1874598257 instance=ExtResource("12_ukpwg")]
 position = Vector2(-794, 1637)
-collision_mask = 3
-damage = 100.0
+damage = 40.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D" unique_id=801645694]
-position = Vector2(255, 0)
+position = Vector2(253, -53)
 shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="ArrowShooter2D2" parent="." unique_id=175022543 instance=ExtResource("12_ukpwg")]
 position = Vector2(-794, 1745)
-collision_mask = 3
-damage = 100.0
+damage = 40.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D2" unique_id=581688964]
-position = Vector2(255, 0)
+position = Vector2(253, -37)
 shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="ArrowShooter2D3" parent="." unique_id=1082895384 instance=ExtResource("12_ukpwg")]
 position = Vector2(-794, 1525)
-collision_mask = 3
-damage = 100.0
+damage = 40.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D3" unique_id=1036671974]
-position = Vector2(255, 0)
+position = Vector2(259, -50)
 shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="ArrowShooter2D4" parent="." unique_id=946341998 instance=ExtResource("12_ukpwg")]
-position = Vector2(1183, 854.0001)
+position = Vector2(1183, 682.0001)
 rotation = -1.8325958
-collision_mask = 3
-damage = 100.0
+shoot_strength = 2000.0
+damage = 20.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D4" unique_id=517589942]
-position = Vector2(255, 0)
+position = Vector2(319.00085, 41.994484)
 shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="ArrowShooter2D5" parent="." unique_id=409335602 instance=ExtResource("12_ukpwg")]
 position = Vector2(1785, 714.00006)
 rotation = -1.8325958
-collision_mask = 3
-damage = 100.0
+shoot_strength = 2000.0
+damage = 20.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D5" unique_id=2140474053]
-position = Vector2(255, 0)
+position = Vector2(295.02353, 54.20475)
 shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="ArrowShooter2D6" parent="." unique_id=545701349 instance=ExtResource("12_ukpwg")]
-position = Vector2(1448.0001, 857.00006)
+position = Vector2(1448.0001, 760.00006)
 rotation = -1.8325958
-collision_mask = 3
-damage = 100.0
+shoot_strength = 2000.0
+damage = 20.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D6" unique_id=1565271472]
-position = Vector2(255, 0)
+position = Vector2(199.55916, -53.161823)
 shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="ArrowShooter2D7" parent="." unique_id=1787294301 instance=ExtResource("12_ukpwg")]
 position = Vector2(3764, -36)
 rotation = -2.997632
-collision_mask = 3
-damage = 100.0
+shoot_strength = 2000.0
+damage = 30.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D7" unique_id=75833335]
-position = Vector2(242.67477, -207.96635)
+position = Vector2(345.19293, 60.098976)
 shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="ArrowShooter2D8" parent="." unique_id=397217822 instance=ExtResource("12_ukpwg")]
 position = Vector2(2970.9998, 496)
 rotation = -2.386325
-collision_mask = 3
-damage = 100.0
+damage = 30.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D8" unique_id=704979597]
-position = Vector2(-55.36792, 898.17957)
+position = Vector2(245.4774, -70.41832)
 rotation = -0.50981283
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="ArrowShooter2D9" parent="." unique_id=572958313 instance=ExtResource("12_ukpwg")]
 position = Vector2(2258, 714.0001)
 rotation = -1.4974742
-collision_mask = 3
-damage = 100.0
+damage = 40.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D9" unique_id=1239886032]
 position = Vector2(255, 0)
 shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="ArrowShooter2D10" parent="." unique_id=1872010041 instance=ExtResource("12_ukpwg")]
-position = Vector2(2995.0002, -591)
+position = Vector2(2991.0002, -382.00006)
 rotation = -0.14703679
-collision_mask = 3
-damage = 100.0
+shoot_strength = 2000.0
+damage = 30.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D10" unique_id=2037428462]
-position = Vector2(255, 0)
+position = Vector2(294.8545, -25.072062)
 shape = SubResource("RectangleShape2D_bhunq")
 
 [node name="Spike2D" parent="." unique_id=1701903250 instance=ExtResource("13_ukpwg")]
@@ -323,3 +323,12 @@ interactable = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LockedDoor/Area2D" unique_id=1911079774]
 position = Vector2(0, 125)
 shape = SubResource("RectangleShape2D_7f0hl")
+
+[node name="ArrowShooter2D11" parent="." unique_id=710642178 instance=ExtResource("12_ukpwg")]
+position = Vector2(2969, -806)
+rotation = -0.13613568
+shoot_strength = 4000.0
+damage = 60.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ArrowShooter2D11" unique_id=665538674]
+shape = SubResource("SegmentShape2D_bhunq")

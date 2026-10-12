@@ -14,6 +14,11 @@ func _ready() -> void:
 		$Spike.visible = true
 	else:
 		$Spike.visible = false
+	GameManager.player_revived.connect(_on_player_revived)
+	
+
+func _on_player_revived():
+	shot = false
 	
 
 func _on_body_entered(body: Node2D) -> void:

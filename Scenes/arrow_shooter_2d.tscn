@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://go0vmcfx34jm" path="res://Art/Hazards/Spike.png" id="2_ac7xv"]
 
 [node name="ArrowShooter2D" type="Area2D" unique_id=1874598257]
+collision_mask = 3
 script = ExtResource("1_rke0c")
 metadata/_custom_type_script = "uid://cb8i15odjqjrs"
 

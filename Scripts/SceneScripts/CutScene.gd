@@ -40,7 +40,7 @@ func PlayNextLine():
 	bCanContinue = false
 	if CurrentIndex > Lines.size() - 1:
 		if not ending:
-			await GameManager.enter_new_room(NextScene, Vector2(-1589,2246), Color.WHITE, 1.2)
+			await GameManager.enter_new_room(NextScene, Vector2(3167.0,-634.0), Color.WHITE, 1.2)
 		else:
 			await TransitionScreen.BeginTransition(1.2, Color.BLACK)
 			get_tree().quit()

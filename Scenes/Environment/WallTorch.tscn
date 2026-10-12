@@ -24,7 +24,7 @@ texture_scale = 4.0
 
 [node name="HotBody2D" type="Area2D" parent="." unique_id=1415207686]
 script = ExtResource("3_5blmf")
-temperature = 40.0
+temperature = 50.0
 metadata/_custom_type_script = "uid://ciusurfrv75ku"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HotBody2D" unique_id=1889690407]

@@ -34,6 +34,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func respawn(respawn_pos: Vector2 = respawn_point):
 	health_component.revive()
+	GameManager.player_revived.emit()
 	global_position = respawn_pos
 	
 

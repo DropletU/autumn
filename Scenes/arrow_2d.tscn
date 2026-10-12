@@ -6,6 +6,9 @@
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bhunq"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2rtjl"]
+blend_mode = 3
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bhunq"]
 size = Vector2(24, 20)
 
@@ -18,6 +21,7 @@ script = ExtResource("1_2rtjl")
 damage = 14.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1586461282]
+material = SubResource("CanvasItemMaterial_2rtjl")
 texture = ExtResource("1_7yg08")
 
 [node name="HitBox2D" type="Area2D" parent="." unique_id=14950121]

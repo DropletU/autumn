@@ -9,6 +9,8 @@ var keys_picked_up: PackedInt32Array = []
 var player_temp: float
 var player_hp: float = player.get_max_health() if player else 100.0
 
+signal player_revived
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	process_physics_priority = 1
